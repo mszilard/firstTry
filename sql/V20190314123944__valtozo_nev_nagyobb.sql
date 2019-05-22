@@ -1,0 +1,1 @@
+alter table jellemzo_valasztasok alter column nev type varchar(1000);

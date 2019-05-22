@@ -1,0 +1,197 @@
+---
+- name: Bejelentkezés
+  uid: 7cd2eecb-7bce-4933-8b05-7b2436d7b87b
+  parameters:
+  - name: felhasznalonev
+  - name: jelszo
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor
+  uid: 5f8d8e91-fe78-46c6-9a1d-8713e7bcef87
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor-Gepek
+  uid: 50e08f2e-3315-44ea-9983-ddad08764932
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Uj gep hozzaadasa
+  uid: 63b0f31b-7372-4e91-a3c0-d545f34566fe
+  parameters:
+  - name: megnevezes
+  - name: oradij
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Gep reszletek(szerkesztes)
+  uid: 73c1446c-234d-41bd-9e69-ccd2e5cc9550
+  parameters:
+  - name: szerk_megnevezes
+  - name: szerk_oradij
+  - name: szerkesztendo_gep
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras inaktivalasa
+  uid: 0df7028c-902d-47f3-b20e-03cdda26f5b2
+  parameters:
+  - name: inaktivalando_eroforras
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Listazott eroforrasok ellenorzese
+  uid: 5f6643ae-56d2-4bdc-a0ed-d9fe9f5a2e7a
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras keresese
+  uid: 57e2f29a-8fe5-4f94-9d1c-809fac23fba1
+  parameters:
+  - name: eroforras_megnevezese
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Passziv eroforrasok listazasa
+  uid: d95b22be-cad7-4bd4-8e6d-bc92a769590f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor - Dijtetelek
+  uid: a6896a03-3470-4cd2-8965-80490b65839c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetel reszletek
+  uid: 58483325-7957-4426-a6fc-638f84a61fa3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras torlese a dijtetelrol.
+  uid: 584b0ead-3fd5-44f9-8a81-0f6431460fc7
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras reszletek
+  uid: f175d0ff-a1c3-42ff-bfde-aace2c8c31e5
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Gep csereje a dijtetelben
+  uid: 863b7a36-4b84-435b-83d2-4ec5f0c3ba67
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras torlese a dijtetelbol(egyeduli eroforras)
+  uid: '029375ce-b0e6-417f-bb59-99746971a003'
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor - Human eroforras
+  uid: b6544f7a-e772-4db6-9a41-5539ad07d199
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Uj human eroforras hozzaadas
+  uid: 2fc431a3-e83c-431c-bfaf-0a8d82b76bc1
+  parameters:
+  - name: megnevezes
+  - name: oradij
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Human eroforras szerkesztese
+  uid: b47194c9-8e28-4e41-b488-cd9278981e56
+  parameters:
+  - name: szerk_megnevezes
+  - name: szerk_oradij
+  - name: szerkesztendo_human
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Uj dijtetel letrehozasa
+  uid: b15a1df5-f431-4070-ace1-a8d6d9c94428
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Gep letrejottenek ellenorzese
+  uid: 3bbb6ab8-97dc-4616-b59e-e5b51956413b
+  parameters:
+  - name: letrehozott_gep
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Gep szerkesztesenek ellenorzese
+  uid: fdfa5368-daab-4f28-9597-58a5a9ba6102
+  parameters:
+  - name: szerkesztett_gep
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras helytelen inaktivalas
+  uid: 90692cbc-acbd-4b69-a530-ea293b1926bf
+  parameters:
+  - name: inaktivalando_eroforras
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Eroforras inaktivalas ellenorzese
+  uid: 93ac211f-004f-4ebd-9fb2-8136a030c90e
+  parameters:
+  - name: Inaktivalando_eroforras
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Lapozas ellenorzese
+  uid: d3c44288-919a-413a-a86d-7e62a1bb68e7
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetel valasztasa(Aktiv-Idozitett)
+  uid: 546df4cd-17f4-4152-ab63-ddb28379ee3d
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Human letrejottenek ellenorzese
+  uid: e217d9ae-976f-47ac-b897-0f3a0808fbfa
+  parameters:
+  - name: letrehozott_human
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Human eroforras szerkesztes ellenorzese
+  uid: b90311aa-b4ae-48a5-ba60-19038ea6abe9
+  parameters:
+  - name: szerkesztett_human
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Human csereje a dijtetelben
+  uid: 9071a8ad-5096-434e-93a0-f9e03f941bc1
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor-Fejezetek
+  uid: 82fcede8-adb8-4d50-a1cb-27c04018efe1
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Uj fejezet letrehozasa
+  uid: 80ac1e7e-1871-4404-a978-6277d7824e80
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Fejezet letrejottenek ellenorzese
+  uid: b8910a75-f2c7-4396-8040-476b3e1fe6a0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Fejezet reszletek
+  uid: 387b7f42-e597-4025-a402-9921c12ea83c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Fejezet szerkesztesenek ellenorzese
+  uid: bf304bc7-a927-4f44-ab9a-e994eb47f77e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Lapozas ellenorzese(fejezetek)
+  uid: 956dc52d-156b-475c-84e2-03b7447c0550
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Fejezet keresese
+  uid: 2547d9bf-4a02-4232-b25f-89d40b3c35a5
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Vizsgalando dijtetelsor kivalasztasa
+  uid: 2c8fb506-2631-4639-aee2-e7cf0ab3b3dd
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor-Dijtetelsorok
+  uid: c5cc0dbb-327e-472d-a6d2-d45694846cfe
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Uj dijtetelsor letrehozasa
+  uid: b6dfde53-26d7-4442-ba87-03a57ff0f3df
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor letrejottenek ellenorzese
+  uid: 7812fa18-adb7-479e-97ee-23d420d25952
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor reszletek
+  uid: 152b0d2d-300d-4a53-90e0-058850fe1c47
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetesor azonnali aktivalasa es annak ellenorzese
+  uid: 2b0462c8-80c3-42e1-9bb8-aacb9dacbee6
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor szerkesztese
+  uid: f75e8f13-7981-4d79-95b1-f3724360ed3f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Dijtetelsor szerkesztesenek ellenorzese
+  uid: ca3f7fe8-7f7a-4aca-816b-b1c3e620a81c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Uj dijtetel letrehozasanak ellenorzese
+  uid: 0171d8cf-b873-46ca-bcb2-6ffc9e590766
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

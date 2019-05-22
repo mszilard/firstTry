@@ -1,0 +1,1 @@
+alter table excel_valtozo_tetel alter column mertekegyseg_id drop not null;

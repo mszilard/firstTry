@@ -1,0 +1,1 @@
+alter table jellemzo_ertek_snapshot add column kit_ver_snapshot_id int not null references kitoltott_modell_ver_snapshot("id");

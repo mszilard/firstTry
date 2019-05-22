@@ -1,0 +1,1 @@
+alter table valtozo_tetel add column passziv boolean;

@@ -1,0 +1,1 @@
+alter table kivitelezo_uzem ADD UNIQUE ("uzem_id","kivitelezo_id")

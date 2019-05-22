@@ -1,0 +1,2 @@
+alter table idozitett_dijtetel_valtozas add column dijtetelsor_id int not null references dijtetelsor("id");
+alter table idozitett_projekt_ujraszamolas add column dijtetelsor_id int not null references dijtetelsor("id");

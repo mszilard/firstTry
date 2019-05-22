@@ -1,0 +1,10 @@
+alter table arutetel add column kozos boolean not null default false;
+alter table arutetel add column uzletag integer;
+alter table arutetel add column beszerzo varchar(255);
+alter table arutetel add column besorolas varchar(255);
+alter table arutetel add column keretszerzodes varchar(255);
+alter table arutetel add column kerekites varchar(255);
+alter table arutetel add column helyszinreelozetes1 varchar(255);
+alter table arutetel add column helyszinreelozetes2 varchar(255);
+alter table arutetel add column utanpotlasiido varchar(255);
+alter table arutetel add column cikkszam varchar(255);

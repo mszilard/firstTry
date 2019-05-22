@@ -1,0 +1,1 @@
+alter table dijtetel add column passziv boolean not null default false;

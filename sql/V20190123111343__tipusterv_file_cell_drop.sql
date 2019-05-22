@@ -1,0 +1,1 @@
+alter table tipusterv drop column tarolt_file_id

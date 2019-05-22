@@ -1,0 +1,1 @@
+alter table dijtetel add column monoblock_id integer references monoblock("monoblock_id");

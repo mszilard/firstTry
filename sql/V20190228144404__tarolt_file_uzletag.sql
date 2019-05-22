@@ -1,0 +1,1 @@
+alter table tarolt_file add column "halozat_tipus" integer not null;

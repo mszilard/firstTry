@@ -1,0 +1,15 @@
+language: java
+sudo: false
+
+before_install:
+  - rvm install 2.2
+  - rvm use 2.2
+  - gem install hiptest-publisher
+  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=265014
+
+
+script:
+  - mvn package
+
+after_script:
+  - hiptest-publisher -c hiptest-publisher.conf -p "target/surefire-reports/junitreports/TEST-eon_test.*.xml" --test-run-id=265014
