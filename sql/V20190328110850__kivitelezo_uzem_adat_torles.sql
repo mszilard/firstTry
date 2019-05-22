@@ -1,1 +1,0 @@
-alter table kivitelezo_uzem add column torolt boolean not null default false;

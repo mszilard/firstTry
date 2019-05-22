@@ -1,1 +1,0 @@
-alter table excel_valtozo_tetel alter column egysegar drop not null;

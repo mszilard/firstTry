@@ -1,1 +1,0 @@
-alter table idozitett_projekt_ujraszamolas add column letrehozas timestamp with time zone not null default current_timestamp;

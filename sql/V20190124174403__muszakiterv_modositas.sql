@@ -1,1 +1,0 @@
-alter table muszakiterv drop column tarolt_file_id;

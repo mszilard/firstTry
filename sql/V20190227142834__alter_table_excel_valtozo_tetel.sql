@@ -1,1 +1,0 @@
-alter table excel_valtozo_tetel drop constraint excel_valtozo_tetel_id_fkey;

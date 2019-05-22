@@ -1,1 +1,0 @@
-alter table projekt_kalkulacio_aud add column organizacios_becsles_datum date;

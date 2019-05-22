@@ -1,1 +1,0 @@
-alter table arutetel_sor_fejlec add column uzletag integer not null;

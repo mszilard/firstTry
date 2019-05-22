@@ -1,1 +1,0 @@
-alter table kivitelezo drop column  "kivitelezo_terulet_id"

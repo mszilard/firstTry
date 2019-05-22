@@ -1,1 +1,0 @@
-alter table kivitelezo_uzem alter column vallalasi_szazalek type decimal;

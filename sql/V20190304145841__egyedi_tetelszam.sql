@@ -1,1 +1,0 @@
-alter table tetel add constraint uq_tetelszam unique(tetelszam);
