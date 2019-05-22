@@ -199,7 +199,7 @@ public class Actionwords {
             }
         }
     }
-
+//jjui
     public void gepCserejeADijtetelben(String kivalasztottGep, String kapcsDijtetel) {
 
         List<WebElement> kapcsDijtetelek = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(2)"));
