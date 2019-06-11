@@ -34,7 +34,7 @@ public class Actionwords {
 
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
-        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+       // System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
         webDriver = new FirefoxDriver(options);
 
 
