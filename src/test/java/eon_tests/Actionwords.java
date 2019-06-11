@@ -22,6 +22,10 @@ public class Actionwords {
 
     private String url_belso = "https://calcon.upsolution.hu";
 
+    static {
+        System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
+    }
+
     public void Wait() {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
     }
