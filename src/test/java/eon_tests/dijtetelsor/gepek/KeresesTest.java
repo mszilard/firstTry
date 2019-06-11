@@ -13,7 +13,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void megjelenoGepekEllenorzeseUidf9958720c251439e896169033ca155e5() {
+    public void megjelenoGepekEllenorzeseUidffb522faad904d129855dc6f5850e1d7() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
@@ -21,14 +21,14 @@ public class KeresesTest {
     }
 
     @Test
-    public void lapozoModulEllenorzeseUid02bd827a1abd4ed59754ad2408dfaaba() {
+    public void lapozoModulEllenorzeseUidff7d4f8aa1e645df86947f5743ca9062() {
         // Given Bejelentkezés "aram_teszt" "aram"
         actionwords.bejelentkezes("aram_teszt", "aram");
         // And Dijtetelsor
         actionwords.dijtetelsor();
         // And Dijtetelsor-Gepek
         actionwords.dijtetelsorGepek();
-        // And Lapozas ellenorzese
+        // And Lapozas ellenorzese (Anyagok/Valtozotetelek)
         actionwords.lapozasEllenorzese();
     }
     public void kereses(String megnevezes) {
@@ -39,12 +39,12 @@ public class KeresesTest {
     }
 
     @Test
-    public void keresesMegfeleloParameterekkelUidcabf9dc511114c628a55bf182dfeb3b5() {
+    public void keresesMegfeleloParameterekkelUid64e7085faec24d069672098b165805e9() {
         kereses("Gép 2");
     }
 
     @Test
-    public void keresesNemMegfeleloParameterekkelUidbcfc300ac59449e593adf40672a40e52() {
+    public void keresesNemMegfeleloParameterekkelUidca2e3c39e9fe48d38e1550da1bcde7c0() {
         kereses(">ß$>");
     }
 
@@ -58,7 +58,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void keresesInaktivGepreInaktivGepUidb9e17b0617814e6ca74435bd6fddec7b() {
+    public void keresesInaktivGepreInaktivGepUid4bd474835bea4244919b8839ca94b99c() {
         keresesInaktivGepre("Teszt-Gép 1");
     }
 
@@ -72,7 +72,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void kapcsolodoDijtetelekListazasagepTeszt1Uidf6e432a72e434c0181a901c788801f61() {
+    public void kapcsolodoDijtetelekListazasagepTeszt1Uid7d56d6e466d84257ab79f9501f273ffe() {
         kapcsolodoDijtetelekListazasagep("Gép 2");
     }
 }

@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import org.testng.annotations.*;
 import eon_tests.Actionwords;
+import org.testng.annotations.*;
 
 public class KeresesTest {
 
@@ -13,7 +13,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void megjelenoHumanokEllenorzeseUid4d9e8999bca14832a1d499ae0260ae4d() {
+    public void megjelenoHumanokEllenorzese() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();
@@ -21,7 +21,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void lapozoModulEllenorzesehumanUid1e11beca53c345428b29568d64ebd867() {
+    public void lapozoModulEllenorzesehuman() {
         // Given Bejelentkezés "aram_teszt" "aram"
         actionwords.bejelentkezes("aram_teszt", "aram");
         // And Dijtetelsor
@@ -39,12 +39,12 @@ public class KeresesTest {
     }
 
     @Test
-    public void kereseshumanMegfeleloParameterekkelUid03d73fe75b174efe998b93b23712190c() {
+    public void kereseshumanMegfeleloParameterekkel() {
         kereseshuman("Humán 2");
     }
 
     @Test
-    public void kereseshumanNemMegfeleloParameterekkelUidae86bad8678048bf879867a265653c25() {
+    public void kereseshumanNemMegfeleloParameterekkel() {
         kereseshuman(">ß$>");
     }
 
@@ -58,7 +58,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void keresesInaktivHumanraTeszt1Uiddcac8c690bff4fb3b8b6f0bbfa3148b9() {
+    public void keresesInaktivHumanraTeszt1() {
         keresesInaktivHumanra("Humán 01");
     }
 }

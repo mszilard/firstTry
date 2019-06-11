@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import org.testng.annotations.*;
 import eon_tests.Actionwords;
+import org.testng.annotations.*;
 
 public class SzerkesztesTest {
 
@@ -11,7 +11,7 @@ public class SzerkesztesTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void humanEroforrasSzerkesztese(String megnevezes, String oradij, String szerkesztendo) {
+    public void humanEroforrasSzerkesztese(String megnevezes, int oradij, String szerkesztendo) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();
@@ -20,12 +20,12 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void humanEroforrasSzerkeszteseSzerkesztesHelyesenUidc063291b9b464346be2f7c849bfb5b84() {
-        humanEroforrasSzerkesztese("Humán 01", "2800", "Humán 1");
+    public void humanEroforrasSzerkeszteseSzerkesztesHelyesen() {
+        humanEroforrasSzerkesztese("Humán 01", 2800, "Humán 1");
     }
 
     @Test
-    public void humanEroforrasSzerkeszteseSzerkesztesHelytelenulUid8375fe4904104cdb869f7d1d2a476af4() {
-        humanEroforrasSzerkesztese("...-.", "", "Humán 2");
+    public void humanEroforrasSzerkeszteseSzerkesztesHelytelenul() {
+        humanEroforrasSzerkesztese("...-.", 0, "Humán 2");
     }
 }

@@ -19,7 +19,7 @@ public class InakitvalasTest {
     }
 
     @Test
-    public void gepInaktivalasaNemMegfeleloFeltetellelInaktivalandoGepUid20b97f17c21b4166841b97cddce8d0ce() {
+    public void gepInaktivalasaNemMegfeleloFeltetellelInaktivalandoGepUid1e455dac6d774d099cd2804db5b7b89c() {
         gepInaktivalasaNemMegfeleloFeltetellel("Teszt-Gép 1");
     }
 
@@ -33,7 +33,7 @@ public class InakitvalasTest {
     }
 
     @Test
-    public void gepInaktivalasInaktivalandoGepUid8cf225a88f8b4cc6854a9b1b4c8b0563() {
+    public void gepInaktivalasInaktivalandoGepUidf37aa90d40cb469eadb5ffceb07a70f9() {
         gepInaktivalas("Teszt-Gép 1");
     }
 }

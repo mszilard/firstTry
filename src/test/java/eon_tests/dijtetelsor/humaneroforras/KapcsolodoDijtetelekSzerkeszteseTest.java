@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import org.testng.annotations.*;
 import eon_tests.Actionwords;
+import org.testng.annotations.*;
 
 public class KapcsolodoDijtetelekSzerkeszteseTest {
 
@@ -15,12 +15,12 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();
-        actionwords.eroforrasReszletek("");
-        actionwords.eroforrasTorleseADijtetelrol("");
+        actionwords.eroforrasReszletek(human);
+        actionwords.eroforrasTorleseADijtetelrol(tetelszam);
     }
 
     @Test
-    public void humanEltavolitasaDijtetelrolTeszt1Uid6fefc663e5ad453a98eab99d49ddd0dd() {
+    public void humanEltavolitasaDijtetelrolTeszt1() {
         humanEltavolitasaDijtetelrol("Humán 01", 1000000);
     }
 
@@ -34,12 +34,12 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
     @Test
-    public void humanCserejeADijtetelrolCsere1Uid57bdcad3c90e47af9b3fb91f7970e5c4() {
+    public void humanCserejeADijtetelrolCsere1() {
         humanCserejeADijtetelrol("Humán 2", "Humán 2");
     }
 
 
-    public void humanEltavolitasaDijtetelrolUtolsoEroforras(String human, String tetelszam) {
+    public void humanEltavolitasaDijtetelrolUtolsoEroforras(String human, int tetelszam) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();
@@ -48,14 +48,14 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
     @Test
-    public void humanEltavolitasaDijtetelrolUtolsoEroforrasTeszt1Uiddd83aa004a234c0fa24fc95f61511c76() {
-        humanEltavolitasaDijtetelrolUtolsoEroforras("Humán 01", "1000000");
+    public void humanEltavolitasaDijtetelrolUtolsoEroforrasTeszt1() {
+        humanEltavolitasaDijtetelrolUtolsoEroforras("Humán 01", 1000000);
     }
 
 
 
     @Test
-    public void valtasDijtetelekKozotthumanUidc3f56297c30e4652ab9a247b682b24ba() {
+    public void valtasDijtetelekKozotthuman() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();

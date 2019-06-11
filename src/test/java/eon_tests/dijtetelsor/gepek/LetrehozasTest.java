@@ -11,7 +11,7 @@ public class LetrehozasTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void ujGepHozzaadasa(String megnevezes, String oradij) {
+    public void ujGepHozzaadasa(String megnevezes, int oradij) {
         // Új gép hozzáadása amely során nevet és óradíjat kell beállítani.
         // Given Bejelentkezés "aram_teszt" "aram"
         actionwords.bejelentkezes("aram_teszt", "aram");
@@ -26,22 +26,22 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void ujGepHozzaadasaHelyesUiddb5e5087905145d19b36e696d7052e76() {
-        ujGepHozzaadasa("Gép 1", "1000");
+    public void ujGepHozzaadasaHelyesUid5984ee07d50047efba76aac61520103e() {
+        ujGepHozzaadasa("Gép 1", 1000);
     }
 
     @Test
-    public void ujGepHozzaadasaHelytelenUidf72df4f510d04a82ae441f561a7ff8b3() {
-        ujGepHozzaadasa("$ß$ß", "");
+    public void ujGepHozzaadasaHelytelenUidec1d2326b2d149ee9ccc15afd8ba13bc() {
+        ujGepHozzaadasa("$ß$ß", 0);
     }
 
     @Test
-    public void ujGepHozzaadasaHelyes2Uid7287a91a6d0f402ca9bb56f35d253fa7() {
-        ujGepHozzaadasa("Gép 2", "1000");
+    public void ujGepHozzaadasaHelyes2Uiddec42d1bd62c460d941cfa73a1bde054() {
+        ujGepHozzaadasa("Gép 2", 1000);
     }
 
     @Test
-    public void ujGepHozzaadasaHelyes3Uid0d2c4e9dc4d44df098d62623d0883f48() {
-        ujGepHozzaadasa("Gép 3", "1500");
+    public void ujGepHozzaadasaHelyes3Uid3776acb7c3b047b7af0fcced6ef432f0() {
+        ujGepHozzaadasa("Gép 3", 1500);
     }
 }

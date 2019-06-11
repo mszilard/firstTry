@@ -5,7 +5,7 @@ before_install:
   - rvm install 2.2
   - rvm use 2.2
   - gem install hiptest-publisher
-  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=265014
+  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=2406310
 
 
 script:

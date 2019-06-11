@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import org.testng.annotations.*;
 import eon_tests.Actionwords;
+import org.testng.annotations.*;
 
 public class LetrehozasTest {
 
@@ -11,7 +11,7 @@ public class LetrehozasTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void humanEroforrasLetrehozasa(String megnevezes, String oradij) {
+    public void humanEroforrasLetrehozasa(String megnevezes, int oradij) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();
@@ -20,22 +20,22 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelyesAdatokkalUid2cd740144dc049059052d1d097aa4476() {
-        humanEroforrasLetrehozasa("Humán 1", "2000");
+    public void humanEroforrasLetrehozasaHelyesAdatokkal() {
+        humanEroforrasLetrehozasa("Humán 1", 2000);
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelytelenAdatokkalUid57e8764479a54eb8bb24244551e40791() {
-        humanEroforrasLetrehozasa("$", "");
+    public void humanEroforrasLetrehozasaHelytelenAdatokkal() {
+        humanEroforrasLetrehozasa("$", 0);
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelyesAdatokkal2Uid6adc96615fb54e8fb540fa7f0164c957() {
-        humanEroforrasLetrehozasa("Humán 2", "2000");
+    public void humanEroforrasLetrehozasaHelyesAdatokkal2() {
+        humanEroforrasLetrehozasa("Humán 2", 2000);
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelyesAdatokkal3Uid85d9f0f43a0644d4bcc435fc04a757db() {
-        humanEroforrasLetrehozasa("Humán 3", "1000");
+    public void humanEroforrasLetrehozasaHelyesAdatokkal3() {
+        humanEroforrasLetrehozasa("Humán 3", 1000);
     }
 }

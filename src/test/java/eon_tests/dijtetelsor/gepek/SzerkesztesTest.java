@@ -11,7 +11,7 @@ public class SzerkesztesTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void gepSzerkesztese(String megnevezes, String oradij, String szerkesztendo) {
+    public void gepSzerkesztese(String megnevezes, int oradij, String szerkesztendo) {
         // A gép alapadatainak szerkesztése, változtatás esetén az új adatok frissítésre kerülnek az érintett díjtételeken, díjtételsorokon, modelleken, projekteken.
         // Given Bejelentkezés "aram_teszt" "aram"
         actionwords.bejelentkezes("aram_teszt", "aram");
@@ -26,12 +26,12 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void gepSzerkeszteseSzerkesztesHelyesAdatokkalUid8273f9f5b139428d819a903522f53156() {
-        gepSzerkesztese("Teszt-Gép 1", "2000", "Gép 1");
+    public void gepSzerkeszteseSzerkesztesHelyesAdatokkalUid594dda4ec9504454ba85f6f1143dd2f2() {
+        gepSzerkesztese("Teszt-Gép 1", 2000, "Gép 1");
     }
 
     @Test
-    public void gepSzerkeszteseSzerkesztesHelytelenAdatokkalUid29d4d690dd134be79ca30d7cdbaf4ecd() {
-        gepSzerkesztese(".", "", "Teszt-Gép 1");
+    public void gepSzerkeszteseSzerkesztesHelytelenAdatokkalUidd2510c32f9bc47deb4f1042dcd4b240e() {
+        gepSzerkesztese(".", 0, "Teszt-Gép 1");
     }
 }
