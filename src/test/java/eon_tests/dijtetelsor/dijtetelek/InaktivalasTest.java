@@ -3,7 +3,7 @@ package eon_tests.dijtetelsor.dijtetelek;
 import eon_tests.Actionwords;
 import org.testng.annotations.*;
 
-public class C_InaktivalasTest {
+public class InaktivalasTest {
 
     public Actionwords actionwords;
 

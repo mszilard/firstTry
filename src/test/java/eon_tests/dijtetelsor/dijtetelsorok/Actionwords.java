@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -27,14 +28,14 @@ public class Actionwords {
     }
 
     public Actionwords() {
-        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-        webDriver = new FirefoxDriver();
-
-
-//        FirefoxOptions options = new FirefoxOptions();
-//        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-//        webDriver = new FirefoxDriver(options);
+//        webDriver = new FirefoxDriver();
+
+
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+        webDriver = new FirefoxDriver(options);
 
 
     }

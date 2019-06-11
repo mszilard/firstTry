@@ -3,7 +3,7 @@ package eon_tests.dijtetelsor.fejezetek;
 import eon_tests.Actionwords;
 import org.testng.annotations.*;
 
-public class D_KeresesTest {
+public class KeresesTest {
 
     public Actionwords actionwords;
 
