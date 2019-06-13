@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.fejezetek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class KeresesTest {
 
@@ -19,12 +19,12 @@ public class KeresesTest {
     }
 
     @Test
-    public void fejezetekKereseseKeresesHelyesParameterekkel() {
+    public void fejezetekKereseseKeresesHelyesParameterekkelUid53d3032076834447be9cd6a05dd3023a() {
         fejezetekKeresese(1, "Teszt Fejezet");
     }
 
     @Test
-    public void fejezetekKereseseKeresesHelytelenParameterekkel() {
+    public void fejezetekKereseseKeresesHelytelenParameterekkelUid57cb82efe0aa41ecb8ab7c5ebfc4e806() {
         fejezetekKeresese(120, "qwwe");
     }
 }

@@ -19,7 +19,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void ujDijtetelsorLetrehozasaDijtetelsor1() {
+    public void ujDijtetelsorLetrehozasaDijtetelsor1Uidb5ff25f90017447eb7908fcc64d37ff4() {
         ujDijtetelsorLetrehozasa("Ditetelsor-Teszt");
     }
 
@@ -33,7 +33,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void dijtetelsorAzonnaliAktivalasAktivalando() {
+    public void dijtetelsorAzonnaliAktivalasAktivalandoUid6e1e277aaf4c4562941abc4cd7b29634() {
         dijtetelsorAzonnaliAktivalas("Ditetelsor-Teszt");
     }
 
@@ -47,7 +47,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void dijtetelsorMultbeliAktivalasiIdovelAktivalando() {
+    public void dijtetelsorMultbeliAktivalasiIdovelAktivalandoUidcb039365b5b94bad97365b1de6ec45ce() {
         dijtetelsorMultbeliAktivalasiIdovel("Ditetelsor-Teszt", 4, 30);
     }
 }

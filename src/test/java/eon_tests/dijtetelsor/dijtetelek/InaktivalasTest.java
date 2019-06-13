@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.dijtetelek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class InaktivalasTest {
 
@@ -20,7 +20,7 @@ public class InaktivalasTest {
     }
 
     @Test
-    public void dijtetelInaktivalasaDijtetelInaktivalasa() {
+    public void dijtetelInaktivalasaDijtetelInaktivalasaUid45c6831bda1d44e48e19475d759cc5ab() {
         dijtetelInaktivalasa("Új díjtétel1");
     }
 }

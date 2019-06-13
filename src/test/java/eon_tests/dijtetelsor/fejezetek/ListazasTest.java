@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.fejezetek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class ListazasTest {
 
@@ -13,7 +13,7 @@ public class ListazasTest {
     }
 
     @Test
-    public void fejezetekLapozoModulEllenorzese() {
+    public void fejezetekLapozoModulEllenorzeseUid25e2777b79404e4fa7b182a139a515ab() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorFejezetek();
@@ -21,7 +21,7 @@ public class ListazasTest {
     }
 
     @Test
-    public void valtasDijtetelekKozottfejezetek() {
+    public void valtasDijtetelekKozottfejezetekUid578d1854fb494c4c9883fbce1e3d2def() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorFejezetek();

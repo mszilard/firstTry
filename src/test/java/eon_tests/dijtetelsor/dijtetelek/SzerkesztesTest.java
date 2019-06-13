@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.dijtetelek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class SzerkesztesTest {
 
@@ -11,26 +11,31 @@ public class SzerkesztesTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-
-    @Test
-    public void dijtetelSzerkesztesetorzs() {
+    public void dijtetelSzerkesztesetorzs(String szerkesztendoDijtetel, String ujMegnevezes) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelek();
-        actionwords.dijtetelSzerkesztese();
-        actionwords.dijtetelSzerkesztesEllenorzese();
+        actionwords.dijtetelSzerkesztese(szerkesztendoDijtetel, ujMegnevezes);
+        actionwords.dijtetelSzerkesztesEllenorzese(ujMegnevezes);
     }
-    public void dijtetelSzerkeszteseEroforras(String dijtetelNeve) {
+
+    @Test
+    public void dijtetelSzerkesztesetorzsNevSzerkesztesUid61d74fe0f36d48d396b031d3d0dc3133() {
+        dijtetelSzerkesztesetorzs("Díjtétel 1", "Szerkesztett Díjtétel");
+    }
+
+
+    public void dijtetelSzerkeszteseEroforras(String dijtetelNeve, String vartOsszeg) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelek();
         actionwords.dijtetelReszletek(dijtetelNeve);
-        actionwords.dijtetelEroforrasSzerkesztese();
+        actionwords.dijtetelEroforrasSzerkesztese(vartOsszeg);
     }
 
     @Test
-    public void dijtetelSzerkeszteseEroforrasDijtetelMegnevezes() {
-        dijtetelSzerkeszteseEroforras("Új dijtétel1");
+    public void dijtetelSzerkeszteseEroforrasDijtetelMegnevezesUid9b85c07af92a4a619e1bd5d32ed9fc03() {
+        dijtetelSzerkeszteseEroforras("Új dijtétel1", "85 800 Ft");
     }
 
 
@@ -43,7 +48,7 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void dijtetelSzerkeszteseUtolsoEroforrasDijtetelNeve() {
+    public void dijtetelSzerkeszteseUtolsoEroforrasDijtetelNeveUidf4984dff6ecb453c8f80ad42cae27261() {
         dijtetelSzerkeszteseUtolsoEroforras("Új dijtétel1");
     }
 }

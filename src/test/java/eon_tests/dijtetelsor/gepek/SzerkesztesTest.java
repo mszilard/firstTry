@@ -26,12 +26,12 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void gepSzerkeszteseSzerkesztesHelyesAdatokkalUid594dda4ec9504454ba85f6f1143dd2f2() {
+    public void gepSzerkeszteseSzerkesztesHelyesAdatokkalUida5bce23548624d2ab94ed22d510cc7b7() {
         gepSzerkesztese("Teszt-Gép 1", 2000, "Gép 1");
     }
 
     @Test
-    public void gepSzerkeszteseSzerkesztesHelytelenAdatokkalUidd2510c32f9bc47deb4f1042dcd4b240e() {
+    public void gepSzerkeszteseSzerkesztesHelytelenAdatokkalUid2e4f33255bb8403c88585e96c4451d2f() {
         gepSzerkesztese(".", 0, "Teszt-Gép 1");
     }
 }

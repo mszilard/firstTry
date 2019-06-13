@@ -42,7 +42,8 @@ public class Actionwords {
 
     public void dijtetelsor() {
         this.Wait();
-        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) a:nth-child(1) span:nth-child(2)")).click();
+        this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
+        this.Wait();
 
     }
     public void bejelentkezes(String s, String s1) {
@@ -60,8 +61,7 @@ public class Actionwords {
     }
 
     public void dijtetelsorDijtetelsorok() {
-        this.webDriver.findElement(By.cssSelector("li.m-menu__item.ng-star-inserted.m-menu__item--submenu.m-menu__item--open li:nth-of-type(1)")).click();
-        this.Wait();
+        //this.webDriver.findElement(By.cssSelector("li.m-menu__item.ng-star-inserted.m-menu__item--submenu.m-menu__item--open li:nth-of-type(1)")).click();
     }
 
     public void ujDijtetelsorLetrehozasa(String nev) {
@@ -82,7 +82,9 @@ public class Actionwords {
                     break;
                 }
             }
+            webDriver.close();
         } else {
+            webDriver.close();
             Assert.fail();
         }
     }
@@ -115,7 +117,9 @@ public class Actionwords {
                     break;
                 }
             }
+            webDriver.close();
         } else {
+            webDriver.close();
             Assert.fail();
         }
 
@@ -152,6 +156,7 @@ public class Actionwords {
                 }
             }
         } else {
+            webDriver.close();
             Assert.fail();
         }
     }

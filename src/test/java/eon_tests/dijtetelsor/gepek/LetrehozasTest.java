@@ -26,22 +26,22 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void ujGepHozzaadasaHelyesUid5984ee07d50047efba76aac61520103e() {
+    public void ujGepHozzaadasaHelyesUid513cc751f82e40f2859dd4ae1818213a() {
         ujGepHozzaadasa("Gép 1", 1000);
     }
 
     @Test
-    public void ujGepHozzaadasaHelytelenUidec1d2326b2d149ee9ccc15afd8ba13bc() {
+    public void ujGepHozzaadasaHelytelenUidf7fc0aa6c0bf4d84be25ccf15dd7e547() {
         ujGepHozzaadasa("$ß$ß", 0);
     }
 
     @Test
-    public void ujGepHozzaadasaHelyes2Uiddec42d1bd62c460d941cfa73a1bde054() {
+    public void ujGepHozzaadasaHelyes2Uid7d004ea685634f5c8699060bc6f1a3d9() {
         ujGepHozzaadasa("Gép 2", 1000);
     }
 
     @Test
-    public void ujGepHozzaadasaHelyes3Uid3776acb7c3b047b7af0fcced6ef432f0() {
+    public void ujGepHozzaadasaHelyes3Uidd43f5c516e5e425fa7d4046b252d3069() {
         ujGepHozzaadasa("Gép 3", 1500);
     }
 }

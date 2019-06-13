@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class InaktivalasTest {
 
@@ -20,7 +20,7 @@ public class InaktivalasTest {
     }
 
     @Test
-    public void humanEroforrasInaktivalasMegfeleloFeltetellelInaktivalandoHuman() {
+    public void humanEroforrasInaktivalasMegfeleloFeltetellelInaktivalandoHumanUid6c890ea7132649c1b5208494825f0b5f() {
         humanEroforrasInaktivalasMegfeleloFeltetellel("Humán 01");
     }
 
@@ -33,7 +33,7 @@ public class InaktivalasTest {
     }
 
     @Test
-    public void humanEroforrasInaktivalasNemMegfeleloFeltetellelInaktivalandoHuman() {
+    public void humanEroforrasInaktivalasNemMegfeleloFeltetellelInaktivalandoHumanUidc37a8e0dece34590a99db97169b808ca() {
         humanEroforrasInaktivalasNemMegfeleloFeltetellel("Humán 2");
     }
 }

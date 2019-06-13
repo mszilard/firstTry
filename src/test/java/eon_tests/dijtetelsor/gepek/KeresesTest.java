@@ -13,7 +13,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void megjelenoGepekEllenorzeseUidffb522faad904d129855dc6f5850e1d7() {
+    public void megjelenoGepekEllenorzeseUidcd2652d7f22a44cd89c781ca6f02a057() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
@@ -21,7 +21,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void lapozoModulEllenorzeseUidff7d4f8aa1e645df86947f5743ca9062() {
+    public void lapozoModulEllenorzeseUid31740132159948bcbe74ab9fc2b45ee1() {
         // Given Bejelentkezés "aram_teszt" "aram"
         actionwords.bejelentkezes("aram_teszt", "aram");
         // And Dijtetelsor
@@ -39,12 +39,12 @@ public class KeresesTest {
     }
 
     @Test
-    public void keresesMegfeleloParameterekkelUid64e7085faec24d069672098b165805e9() {
+    public void keresesMegfeleloParameterekkelUid421350804ceb4cb0a17a36bbd4379b39() {
         kereses("Gép 2");
     }
 
     @Test
-    public void keresesNemMegfeleloParameterekkelUidca2e3c39e9fe48d38e1550da1bcde7c0() {
+    public void keresesNemMegfeleloParameterekkelUid302e008e2ccc4c35823d7f3cd466691d() {
         kereses(">ß$>");
     }
 
@@ -58,7 +58,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void keresesInaktivGepreInaktivGepUid4bd474835bea4244919b8839ca94b99c() {
+    public void keresesInaktivGepreInaktivGepUid2d8d3c495bdb4c90a66041fc40ddb357() {
         keresesInaktivGepre("Teszt-Gép 1");
     }
 
@@ -72,7 +72,7 @@ public class KeresesTest {
     }
 
     @Test
-    public void kapcsolodoDijtetelekListazasagepTeszt1Uid7d56d6e466d84257ab79f9501f273ffe() {
+    public void kapcsolodoDijtetelekListazasagepTeszt1Uid9d62fadfb08c4f53b519c6bbe0aebe69() {
         kapcsolodoDijtetelekListazasagep("Gép 2");
     }
 }

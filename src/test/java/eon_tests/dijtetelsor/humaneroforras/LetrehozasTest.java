@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class LetrehozasTest {
 
@@ -20,22 +20,22 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelyesAdatokkal() {
+    public void humanEroforrasLetrehozasaHelyesAdatokkalUidcbd8052dbaca48a2b0bc92d428517fc5() {
         humanEroforrasLetrehozasa("Humán 1", 2000);
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelytelenAdatokkal() {
+    public void humanEroforrasLetrehozasaHelytelenAdatokkalUidf3d43b6c68004f9689decbbb6ddece20() {
         humanEroforrasLetrehozasa("$", 0);
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelyesAdatokkal2() {
+    public void humanEroforrasLetrehozasaHelyesAdatokkal2Uid00229d1ba9714f2cb01dade90928ab00() {
         humanEroforrasLetrehozasa("Humán 2", 2000);
     }
 
     @Test
-    public void humanEroforrasLetrehozasaHelyesAdatokkal3() {
+    public void humanEroforrasLetrehozasaHelyesAdatokkal3Uid5661eaf96546441e8eb13b000a4a09a1() {
         humanEroforrasLetrehozasa("Humán 3", 1000);
     }
 }

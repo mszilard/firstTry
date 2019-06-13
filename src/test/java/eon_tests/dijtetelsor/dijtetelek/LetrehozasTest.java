@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.dijtetelek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class LetrehozasTest {
 
@@ -20,22 +20,22 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void ujDijtetelLetrehozasaLetrehozasHelyesAdatokkal() {
-        ujDijtetelLetrehozasa(1000001, "Teszt Fejezet", "Új díjtétel1", "feles", "leírás", "megj", "db", "Teszt-Gép 1", 1, 1, "Gép 2", 2, 2, "Humán 01", 2, 2, "Humán 2", 2, 2);
+    public void ujDijtetelLetrehozasaLetrehozasHelyesAdatokkalUidb1a9309b1a9548c3b51fa7e92b3f5480() {
+        ujDijtetelLetrehozasa(1000001, "TF", "Új díjtétel1", "feles", "leírás", "megj", "db", "Teszt-Gép 1", 1, 1, "Gép 2", 2, 2, "Humán 01", 2, 2, "Humán 2", 2, 2);
     }
 
     @Test
-    public void ujDijtetelLetrehozasaLetrehozasHelytelenAdatokkal() {
-        ujDijtetelLetrehozasa(1000002, "Teszt Fejezet", "", "feles", "leírás", "megj", "tek", "Gép 2", 0, 1, "Gép 3", 0, 0, "Humán 2", 1, 0, "Humán 3", 0, 0);
+    public void ujDijtetelLetrehozasaLetrehozasHelytelenAdatokkalUid80b3c9f5660a4c21ae3d98a73839d215() {
+        ujDijtetelLetrehozasa(1000002, "TF", "", "feles", "leírás", "megj", "tek", "Gép 2", 0, 1, "Gép 3", 0, 0, "Humán 2", 1, 0, "Humán 3", 0, 0);
     }
 
     @Test
-    public void ujDijtetelLetrehozasaLetrehozasDuplikaltGeppel() {
-        ujDijtetelLetrehozasa(1000003, "Teszt Fejezet", "Új díjtétel3", "feles", "leírás", "megj", "db", "Gép 3", 3, 3, "Gép 3", 2, 2, "Humán 2", 2, 2, "Humán 3", 3, 3);
+    public void ujDijtetelLetrehozasaLetrehozasDuplikaltGeppelUid8094652abfc843a0878743e120884196() {
+        ujDijtetelLetrehozasa(1000003, "TF", "Új díjtétel3", "feles", "leírás", "megj", "db", "Gép 3", 3, 3, "Gép 3", 2, 2, "Humán 2", 2, 2, "Humán 3", 3, 3);
     }
 
     @Test
-    public void ujDijtetelLetrehozasaLetrehozasDuplikaltHumannal() {
-        ujDijtetelLetrehozasa(1000004, "Teszt Fejezet", "Új díjtétel4", "feles", "leírás", "megj", "db", "Gép 2", 1, 1, "Gép 3", 2, 2, "Humán 2", 3, 1, "Humán 2", 1, 1);
+    public void ujDijtetelLetrehozasaLetrehozasDuplikaltHumannalUidf2deb9c34a1d4511bbc260e3a18c136d() {
+        ujDijtetelLetrehozasa(1000004, "TF", "Új díjtétel4", "feles", "leírás", "megj", "db", "Gép 2", 1, 1, "Gép 3", 2, 2, "Humán 2", 3, 1, "Humán 2", 1, 1);
     }
 }

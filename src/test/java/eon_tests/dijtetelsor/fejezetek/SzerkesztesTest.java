@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.fejezetek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class SzerkesztesTest {
 
@@ -21,12 +21,12 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void fejezetSzerkeszteseHelyesAdatokkal() {
+    public void fejezetSzerkeszteseHelyesAdatokkalUid471a37668825470982269242fe5f9635() {
         fejezetSzerkesztese(1, "Teszt Fejezet", "TF", 1, 1, "Teszt fejezet");
     }
 
     @Test
-    public void fejezetSzerkeszteseHelytelenAdatokkal() {
+    public void fejezetSzerkeszteseHelytelenAdatokkalUid4bd273b9865b40cbb437ee9bd4d9b417() {
         fejezetSzerkesztese(200, "", "TF", 0, 0, "");
     }
 }

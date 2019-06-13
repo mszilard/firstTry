@@ -13,13 +13,13 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
     @Test
-    public void valtasDijtetelekKozottUide00b4296995b4bbc8277a52b95f2be8b() {
+    public void valtasDijtetelekKozottUidc4ef7184cfc14baeb2fa7744fd4ba5ad() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
         actionwords.dijtetelValasztasaAktivIdozitett();
     }
-    public void gepEltavolitasaDijtetelrol(int tetelszam, String gep) {
+    public void gepEltavolitasaDijtetelrol(String tetelszam, String gep) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
@@ -28,8 +28,8 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
     @Test
-    public void gepEltavolitasaDijtetelrolGep1EltavolitasaUid02ff3e5d8d734c5281cec78c4e4ef56b() {
-        gepEltavolitasaDijtetelrol(1000000, "Teszt-Gép 1");
+    public void gepEltavolitasaDijtetelrolGep1EltavolitasaUid0f7ac1d5da2c49daa2950e0cee0f8b12() {
+        gepEltavolitasaDijtetelrol("13.9.2.220", "Gép 19");
     }
 
 
@@ -42,7 +42,7 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
     @Test
-    public void gepCserejeADijtetelrolSzerk1Uide17ecc563bf54ff2acb9063d99e8e365() {
+    public void gepCserejeADijtetelrolSzerk1Uida9469f4e28f949ee99c42a8a64d2774d() {
         gepCserejeADijtetelrol("Gép 2", 1000000);
     }
 
@@ -56,7 +56,7 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
     @Test
-    public void gepEltavolitasaDijtetelrolUtolsoEroforrasTeszt1Uid61955983fd084d75bb86583983f10e84() {
+    public void gepEltavolitasaDijtetelrolUtolsoEroforrasTeszt1Uidd94dea29445c43ddb0c13f5637d80469() {
         gepEltavolitasaDijtetelrolUtolsoEroforras("Gép 2", 1000000);
     }
 }

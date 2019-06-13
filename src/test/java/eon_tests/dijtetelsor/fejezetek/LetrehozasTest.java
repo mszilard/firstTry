@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.fejezetek;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class LetrehozasTest {
 
@@ -20,12 +20,12 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void fejezetLetrehozasaHelyesAdatokkal() {
+    public void fejezetLetrehozasaHelyesAdatokkalUid31b10c10251b4f75916f1b3b1b5dbb9c() {
         fejezetLetrehozasa(1, "Teszt fejezet", "TF", "s1", "s1");
     }
 
     @Test
-    public void fejezetLetrehozasaHelytelenAdatokkal() {
+    public void fejezetLetrehozasaHelytelenAdatokkalUid12041dc1396a457f85b63009246b2b49() {
         fejezetLetrehozasa(101, "", "GT", "s3", "s3");
     }
 }

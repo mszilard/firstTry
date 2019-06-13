@@ -21,7 +21,6 @@ public class Actionwords {
     private WebDriver webDriver;
     protected WebDriverWait wait;
     String url_belso = "http://10.10.1.25:91";
-
     //private String url_belso = "https://calcon.upsolution.hu";
 
     public void Wait() {
@@ -29,13 +28,13 @@ public class Actionwords {
     }
 
     public Actionwords() {
-//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
-//        webDriver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+        webDriver = new FirefoxDriver();
 
-        FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
-        //System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
-        webDriver = new FirefoxDriver(options);
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.setHeadless(true);
+//        //System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+//        webDriver = new FirefoxDriver(options);
     }
 
     public void bejelentkezes(String s, String s1) {
@@ -239,6 +238,7 @@ public class Actionwords {
 
     public void kivitelezoLetrejottenekEllenorzese(String cegnev) {
         Wait();
+        webDriver.findElement(By.cssSelector("mat-form-field:nth-child(1) input")).clear();
         webDriver.findElement(By.cssSelector("mat-form-field:nth-child(1) input")).sendKeys(cegnev, Keys.ENTER);
         Wait();
         List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet mat-cell.mat-cell:nth-child(1)"));
@@ -257,7 +257,7 @@ public class Actionwords {
     public void kivitelezokSzurese(String szurendo) {
 
         Wait();
-        webDriver.findElement(By.cssSelector("mat-form-field:nth-child(2) input")).click();
+        webDriver.findElement(By.cssSelector("div.m-portlet__body span.mat-select-placeholder")).click();
         Wait();
         List<WebElement> tipusList = webDriver.findElements(By.cssSelector("mat-option"));
         for (int i = 0; i < tipusList.size(); i++) {

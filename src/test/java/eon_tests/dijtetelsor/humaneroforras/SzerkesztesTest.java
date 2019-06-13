@@ -1,7 +1,7 @@
 package eon_tests.dijtetelsor.humaneroforras;
 
-import eon_tests.Actionwords;
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class SzerkesztesTest {
 
@@ -20,12 +20,12 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void humanEroforrasSzerkeszteseSzerkesztesHelyesen() {
+    public void humanEroforrasSzerkeszteseSzerkesztesHelyesenUid41227445bbbe44a78fd3a7359da68c26() {
         humanEroforrasSzerkesztese("Humán 01", 2800, "Humán 1");
     }
 
     @Test
-    public void humanEroforrasSzerkeszteseSzerkesztesHelytelenul() {
+    public void humanEroforrasSzerkeszteseSzerkesztesHelytelenulUide046bf5860a241969cdf35b852b39eac() {
         humanEroforrasSzerkesztese("...-.", 0, "Humán 2");
     }
 }
