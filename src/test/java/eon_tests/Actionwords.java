@@ -148,6 +148,10 @@ public class Actionwords {
         Wait();
 
         List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet mat-cell.mat-cell:nth-child(1)"));
+        if (keresesEredmenye.size()==0){
+            Assert.fail("A keresés üres listát ad vissza.");
+        }
+
 
         for (int i = 0; i < keresesEredmenye.size(); i++) {
             System.out.println(keresesEredmenye.get(i).getText());
@@ -157,7 +161,7 @@ public class Actionwords {
                 break;
             }
         }
-        webDriver.close();
+        //webDriver.close();
 
     }
 
