@@ -39,6 +39,13 @@ delete from aktivalasi_szabaly;
 delete from modell_verzio;
 delete from modell;
 
+-- Kivitelezo
+delete from kivitelezo_uzem;
+delete from kivitelezo_felhasznalok;
+delete from kivitelezo_rezsianyag;
+delete from kivitelezo_terulet;
+delete from kivitelezo;
+
 -- Arutetel
 delete from excel_arutetel;
 delete from cserelendo_arutetel;
@@ -67,13 +74,6 @@ delete from dijtetelsor;
 -- Tetel
 delete from tetel_aktiv_koltseg;
 delete from tetel;
-
--- Kivitelezo
-delete from kivitelezo_uzem;
-delete from kivitelezo_felhasznalok;
-delete from kivitelezo_rezsianyag;
-delete from kivitelezo_terulet;
-delete from kivitelezo;
 
 -- Megbizo
 delete from megbizo_felhasznalok;
