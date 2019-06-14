@@ -29,13 +29,23 @@ public class Actionwords {
 
 
     public Actionwords() {
-       System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-        webDriver = new FirefoxDriver();
+        //Linux
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        webDriver = new FirefoxDriver(options);
 
+
+
+        //Headless
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
+
+        //Normal
+//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//        webDriver = new FirefoxDriver();
+
     }
 
     public void Wait() {
@@ -68,6 +78,7 @@ public class Actionwords {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
             }
+
         }
         Wait();
         this.webDriver.findElement(By.cssSelector("div button.m-btn.ng-star-inserted")).click();
