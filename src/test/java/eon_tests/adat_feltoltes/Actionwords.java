@@ -29,13 +29,13 @@ public class Actionwords {
 
 
     public Actionwords() {
-//       System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-//        webDriver = new FirefoxDriver();
+       System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+        webDriver = new FirefoxDriver();
 
-        FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-        webDriver = new FirefoxDriver(options);
+//        webDriver = new FirefoxDriver(options);
     }
 
     public void Wait() {
@@ -63,7 +63,7 @@ public class Actionwords {
     public void dijtetelsorAktivalas(String dijtetelsorNev) {
 
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(1)"));
-        for (int i = 1; i < dijtetelsorok.size(); i++) {
+        for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals(dijtetelsorNev)) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
@@ -122,7 +122,5 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(String.valueOf(fHumanszorzo));
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(String.valueOf(fGepszorzo));
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
-
-        webDriver.close();
     }
 }
