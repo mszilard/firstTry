@@ -58,6 +58,7 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         this.Wait();
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
+        Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("mat-dialog-container input[name=nev]")).sendKeys(dijtetelsorNev);
