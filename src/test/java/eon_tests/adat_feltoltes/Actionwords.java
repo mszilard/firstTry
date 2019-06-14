@@ -82,7 +82,7 @@ public class Actionwords {
         Wait();
     }
 
-    public void gepFelvetele(String gepNev, int gepOradij) {
+    public void gepFelvetele(String gepNev, int gepOradij,String gep2Nev, int gep2Oradij) {
         Wait();
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(5)"));
 
@@ -95,21 +95,38 @@ public class Actionwords {
         Wait();
 
         webDriver.findElement(By.cssSelector("div.m-portlet__body a[href*=gepek]")).click();
-
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(gepNev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(gepOradij));
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
         Wait();
+
+        webDriver.findElement(By.cssSelector("div.m-portlet__body a[href*=gepek]")).click();
+        this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(gep2Nev);
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(gep2Oradij));
+        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        Wait();
     }
 
-    public void humanFelvetele(String humanNev, int humanOradij) {
+    public void humanFelvetele(String humanNev, int humanOradij,String human2Nev, int human2Oradij) {
 
         webDriver.findElement(By.cssSelector("div.m-portlet__body a[href*=humaneroforrasok]")).click();
 
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(humanNev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(humanOradij));
+        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled()){
+            this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        }else {
+            webDriver.close();
+            Assert.fail("Hibás kitöltés miatt a humánerőforrás nem menthető ezért a folymat megszakad.");
+        }
+        Wait();
+
+        this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(human2Nev);
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(human2Oradij));
         if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled()){
             this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
         }else {
