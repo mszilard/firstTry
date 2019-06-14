@@ -89,12 +89,12 @@ public class Actionwords {
         }
     }
 
-    public void dijtetelsorReszletek(String regiNev) {
+    public void dijtetelsorReszletek(String nev) {
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(1)"));
 
 
         for (int i = 1; i < dijtetelsorok.size(); i++) {
-            if (dijtetelsorok.get(i).getText().trim().equals(regiNev)) {
+            if (dijtetelsorok.get(i).getText().trim().equals(nev)) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
             }
@@ -103,10 +103,8 @@ public class Actionwords {
     }
 
     public void dijtetesorAzonnaliAktivalasaEsAnnakEllenorzese(String nev) {
-        this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
+        this.webDriver.findElement(By.cssSelector("div button.m-btn.ng-star-inserted")).click();
         Wait();
-        if (webDriver.getCurrentUrl().contentEquals(url_belso + "/dijtetelsorok")) {
-
 
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
             List<WebElement> dijtetelsorallapotok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(5)"));
@@ -117,12 +115,10 @@ public class Actionwords {
                     break;
                 }
             }
-            webDriver.close();
-        } else {
-            webDriver.close();
-            Assert.fail();
-        }
-
+            if(dijtetelsorok.size()==0){
+                webDriver.close();
+                Assert.fail();
+            }
     }
 
     public void dijtetelsorMultbeliIdoMegadasa(int ora, int perc) {

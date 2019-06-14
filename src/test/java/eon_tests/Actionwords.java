@@ -212,7 +212,6 @@ public class Actionwords {
             }
         }
         Wait();
-
         webDriver.findElement(By.cssSelector("div.m-portlet__body a[href*=humaneroforrasok]")).click();
     }
 
