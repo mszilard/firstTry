@@ -73,6 +73,7 @@ public class Actionwords {
     public void dijtetelsorAktivalas(String dijtetelsorNev) {
 
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(1)"));
+        Wait();
         for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals(dijtetelsorNev)) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
