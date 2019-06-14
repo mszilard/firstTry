@@ -20,27 +20,26 @@ public class Actionwords {
     private WebDriver webDriver;
     protected WebDriverWait wait;
     String url_belso = "http://10.10.1.25:91";
-
     //private String url_belso = "https://calcon.upsolution.hu";
 
-//    static {
-//        System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
-//    }
+    static {
+        System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
+    }
+
+
+
+    public Actionwords() {
+//       System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//        webDriver = new FirefoxDriver();
+
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+        webDriver = new FirefoxDriver(options);
+    }
 
     public void Wait() {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-    }
-
-    public Actionwords() {
-       System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-        webDriver = new FirefoxDriver();
-
-//        FirefoxOptions options = new FirefoxOptions();
-//        options.setHeadless(true);
-////        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-//        webDriver = new FirefoxDriver(options);
-
-
     }
 
     public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) {
