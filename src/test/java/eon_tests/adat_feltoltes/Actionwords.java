@@ -39,7 +39,7 @@ public class Actionwords {
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
 
-        //Normal
+//        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
 
@@ -57,6 +57,7 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         this.Wait();
+        Wait();
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
