@@ -23,6 +23,10 @@ public class Actionwords {
 //    private String url_belso = "https://calcon.upsolution.hu";
 
 
+    static {
+        System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
+    }
+
     public Actionwords() {
         //Linux
         FirefoxOptions options = new FirefoxOptions();
