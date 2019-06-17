@@ -58,6 +58,8 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         this.Wait();
         Wait();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"m_header_menu\"]/ul/li[1]/a")));
+
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
