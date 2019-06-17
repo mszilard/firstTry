@@ -39,7 +39,7 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
 
-    public void humanEltavolitasaDijtetelrolUtolsoEroforras(String human, int tetelszam) {
+    public void humanEltavolitasaDijtetelrolUtolsoEroforras(String human, String tetelszam) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorHumanEroforras();
@@ -49,7 +49,7 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
 
     @Test
     public void humanEltavolitasaDijtetelrolUtolsoEroforrasTeszt1Uid21666454aeb74806aa6b5efff0c8fecc() {
-        humanEltavolitasaDijtetelrolUtolsoEroforras("Humán 01", 1000000);
+        humanEltavolitasaDijtetelrolUtolsoEroforras("Humán 01", "10.0.0.000");
     }
 
 

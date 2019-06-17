@@ -19,25 +19,31 @@ public class Actionwords {
 
     private WebDriver webDriver;
     protected WebDriverWait wait;
-    //String url_belso = "http://10.10.1.25:91";
+    String url_belso = "http://10.10.1.25:91";
+//    private String url_belso = "https://calcon.upsolution.hu";
 
-    private String url_belso = "https://calcon.upsolution.hu";
-
-    public void Wait() {
-        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-    }
 
     public Actionwords() {
+        //Linux
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        webDriver = new FirefoxDriver(options);
+//
+//
+//        //Headless
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.setHeadless(true);
+//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//        webDriver = new FirefoxDriver(options);
+
+        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
 
+    }
 
-        FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
-       // System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
-        webDriver = new FirefoxDriver(options);
-
-
+    public void Wait() {
+        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
     }
 
     public void dijtetelsor() {
@@ -73,8 +79,6 @@ public class Actionwords {
 
     public void dijtetelsorLetrejottenekEllenorzese(String nev) {
         Wait();
-        if (webDriver.getCurrentUrl().contentEquals(url_belso + "/dijtetelsorok")) {
-
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
             for (int i = 0; i < dijtetelsorok.size(); i++) {
                 if (dijtetelsorok.get(i).getText().trim().equals(nev)) {
@@ -83,17 +87,13 @@ public class Actionwords {
                 }
             }
             webDriver.close();
-        } else {
-            webDriver.close();
-            Assert.fail();
-        }
     }
 
     public void dijtetelsorReszletek(String nev) {
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(1)"));
 
 
-        for (int i = 1; i < dijtetelsorok.size(); i++) {
+        for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals(nev)) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
@@ -104,6 +104,8 @@ public class Actionwords {
 
     public void dijtetesorAzonnaliAktivalasaEsAnnakEllenorzese(String nev) {
         this.webDriver.findElement(By.cssSelector("div button.m-btn.ng-star-inserted")).click();
+        Wait();
+        this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
 
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
@@ -124,10 +126,11 @@ public class Actionwords {
     public void dijtetelsorMultbeliIdoMegadasa(int ora, int perc) {
         this.webDriver.findElement(By.cssSelector(".ngx-material-timepicker-toggle")).click();
         Wait();
-        this.webDriver.findElement(By.cssSelector("ngx-material-timepicker-face > div > div > div:nth-child("+ ora +") > span")).click();
+        this.webDriver.findElement(By.cssSelector("ngx-material-timepicker-face div div div:nth-child("+ ora +") span")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div:nth-child(2) ngx-material-timepicker-button button")).click();
-        Assert.assertTrue(!this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled());
+        Assert.assertTrue(!this.webDriver.findElement(By.cssSelector("div.m-portlet button:nth-child(2)")).isEnabled());
+        webDriver.close();
 
     }
 

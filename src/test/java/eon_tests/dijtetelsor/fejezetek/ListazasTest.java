@@ -19,12 +19,4 @@ public class ListazasTest {
         actionwords.dijtetelsorFejezetek();
         actionwords.lapozasEllenorzesefejezetek();
     }
-
-    @Test
-    public void valtasDijtetelekKozottfejezetekUid578d1854fb494c4c9883fbce1e3d2def() {
-        actionwords.bejelentkezes("aram_teszt", "aram");
-        actionwords.dijtetelsor();
-        actionwords.dijtetelsorFejezetek();
-        actionwords.vizsgalandoDijtetelsorKivalasztasa();
-    }
 }

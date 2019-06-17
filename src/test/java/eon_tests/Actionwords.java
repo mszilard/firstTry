@@ -32,14 +32,21 @@ public class Actionwords {
     }
 
     public Actionwords() {
-//       System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-//        webDriver = new FirefoxDriver();
-
-
+        //Linux
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
-//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
         webDriver = new FirefoxDriver(options);
+//
+//
+//        //Headless
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.setHeadless(true);
+//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//        webDriver = new FirefoxDriver(options);
+
+//        //Normal
+//        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//        webDriver = new FirefoxDriver();
 
 
     }
@@ -47,30 +54,29 @@ public class Actionwords {
     public void dijtetelsor() {
         this.Wait();
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
-
     }
 
     public void dijtetelsorGepek() {
         Wait();
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(5)"));
 
-        for (int i = 1; i < dijtetelsorok.size(); i++) {
+        for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals("Aktív")) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
             }
         }
         Wait();
-
         webDriver.findElement(By.cssSelector("div.m-portlet__body a[href*=gepek]")).click();
-
     }
 
     public void ujGepHozzaadasa(String megnevezes, int oradij) {
 
+        //todo duplikáció
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(megnevezes);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(oradij));
+        Assert.assertTrue(webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled());
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
 
     }
@@ -190,7 +196,7 @@ public class Actionwords {
         Wait();
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(5)"));
 
-        for (int i = 1; i < dijtetelsorok.size(); i++) {
+        for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals("Aktív")) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
@@ -205,7 +211,7 @@ public class Actionwords {
         Wait();
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(5)"));
 
-        for (int i = 1; i < dijtetelsorok.size(); i++) {
+        for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals("Aktív")) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
@@ -216,15 +222,13 @@ public class Actionwords {
     }
 
     public void ujHumanEroforrasHozzaadas(String megnevezes, int oradij) {
+        //todo duplikáció esetére kitalálni valamit
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(megnevezes);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(oradij));
-        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled()){
-            this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
-        }else {
-            webDriver.close();
-            Assert.fail("Hibás kitöltés miatt a humánerőforrás nem menthető ezért a folymat megszakad.");
-        }
+        Assert.assertTrue(webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled());
+        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+
     }
 
     public void eroforrasTorleseADijtetelrol(String tetelszam) {
@@ -258,7 +262,7 @@ public class Actionwords {
 
     }
 
-    public void gepCserejeADijtetelben(String kivalasztottGep, int kapcsDijtetel) {
+    public void gepCserejeADijtetelben(String kivalasztottGep, String kapcsDijtetel) {
 
         List<WebElement> kapcsDijtetelek = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(2)"));
         for (int i = 0; i < kapcsDijtetelek.size(); i++) {
@@ -295,7 +299,7 @@ public class Actionwords {
         }
     }
 
-    public void eroforrasTorleseADijtetelbolegyeduliEroforras(int tetelszam) {
+    public void eroforrasTorleseADijtetelbolegyeduliEroforras(String tetelszam) {
         List<WebElement> kapcsDijtetelek = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(2)"));
         for (int i = 0; i < kapcsDijtetelek.size(); i++) {
 
@@ -390,9 +394,10 @@ public class Actionwords {
     }
 
     public void gepReszletekszerkesztes(String megnevezes, int oradij, String szekesztendo) {
+        Wait();
         webDriver.findElement(By.cssSelector("mat-form-field input")).sendKeys(szekesztendo, Keys.ENTER);
         Wait();
-        List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet:nth-of-type(3) mat-cell.mat-cell:nth-child(1)"));
+        List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet mat-cell.mat-cell:nth-child(1)"));
 
 
         for (int i = 0; i < keresesEredmenye.size(); i++) {
@@ -408,11 +413,18 @@ public class Actionwords {
         webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).clear();
         webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(oradij));
 
-        Assert.assertTrue(webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled());
+        if((webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled()))
+        {
+            webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        }else{
+            webDriver.close();
+            Assert.fail("Hibás kitöltés miatt a teszt nem folytatható, ezért megszakad.");
+        }
 
-        //TODO mat-dialog-container displayed check
-
-        webDriver.findElement(By.cssSelector("mat-dialog-container button.btn-primary")).click();
+        if (webDriver.findElement(By.cssSelector("mat-dialog-container")).isDisplayed())
+        {
+            webDriver.findElement(By.cssSelector("mat-dialog-container button.btn-primary")).click();
+        }
         Wait();
 
         webDriver.findElement(By.cssSelector("div.m-portlet:nth-of-type(2) input")).clear();
@@ -560,7 +572,7 @@ public class Actionwords {
         List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet mat-cell.mat-cell:nth-child(1)"));
         for (int i = 0; i < keresesEredmenye.size(); i++) {
             if (keresesEredmenye.get(i).getText().trim().equals(s)) {
-                System.out.println(i);
+                System.out.println("Sikeres szerkesztés");
                 webDriver.close();
                 break;
             }
@@ -575,7 +587,7 @@ public class Actionwords {
         webDriver.findElement(By.cssSelector("mat-form-field input")).sendKeys(inaktivalando, Keys.ENTER);
         Wait();
 
-        List<WebElement> inakitavalandoKeres = webDriver.findElements(By.cssSelector(" mat-row mat-cell:nth-of-type(1)"));
+        List<WebElement> inakitavalandoKeres = webDriver.findElements(By.cssSelector("mat-row mat-cell:nth-of-type(1)"));
 
         System.out.println(inakitavalandoKeres.size());
         for (int i = 0; i < inakitavalandoKeres.size(); i++) {
@@ -601,23 +613,24 @@ public class Actionwords {
     public void eroforrasInaktivalasEllenorzese(String gepMegnevezes) {
 
 
-//        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(2) a:nth-child(1) span:nth-child(2)")).click();
-//        this.Wait();
-//        this.webDriver.findElement(By.cssSelector("a.m-btn--pill:nth-child(1)")).click();
-//
-//        this.webDriver.findElement(By.cssSelector(".m-form div:nth-child(9) div:nth-child(2) a:nth-child(1)")).click();
-//        Wait();
-//
-//        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepId]")).sendKeys(gepMegnevezes);
-//        Wait();
-//        List<WebElement> gepek = webDriver.findElements(By.cssSelector("mat-option"));
-//        String gep = gepMegnevezes;
-//        for (WebElement element : gepek) {
-//            if (element.getText().equals(gep)) {
-//                Assert.fail();
-//                break;
-//            }
-//        }
+        this.webDriver.findElement(By.cssSelector("li.m-menu__item:nth-child(6) div:nth-child(2) ul:nth-child(2) li:nth-child(2) a:nth-child(1) span:nth-child(2)")).click();
+        this.Wait();
+        this.webDriver.findElement(By.cssSelector("a.m-btn--pill:nth-child(1)")).click();
+
+        this.webDriver.findElement(By.cssSelector(".m-form div:nth-child(9) div:nth-child(2) a:nth-child(1)")).click();
+        Wait();
+
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepId]")).sendKeys(gepMegnevezes);
+        Wait();
+        List<WebElement> gepek = webDriver.findElements(By.cssSelector("mat-option"));
+        String gep = gepMegnevezes;
+        for (WebElement element : gepek) {
+            if (element.getText().equals(gep)) {
+                webDriver.close();
+                Assert.fail();
+                break;
+            }
+        }
 
 
     }
@@ -736,7 +749,7 @@ public class Actionwords {
         Wait();
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(5)"));
 
-        for (int i = 1; i < dijtetelsorok.size(); i++) {
+        for (int i = 0; i < dijtetelsorok.size(); i++) {
             if (dijtetelsorok.get(i).getText().trim().equals("Aktív")) {
                 webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+ (i +1)+") mat-cell:nth-child(6) a.btn")).click();
                 break;
@@ -745,6 +758,7 @@ public class Actionwords {
         Wait();
 
         webDriver.findElement(By.cssSelector("div.m-portlet__body a[href*=fejezetek]")).click();
+        Wait();
     }
 
     public void ujFejezetLetrehozasa(int sorszam, String megnevezes, String rovidnev, String humanSzorzo, String gepSzorzo) {
@@ -754,7 +768,13 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(rovidnev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(humanSzorzo);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(gepSzorzo);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled())
+        {
+            this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        }
+        else{
+            Assert.fail("Hibás adat kitöltés ezért a teszt megszakad");
+        }
 
     }
 
@@ -779,11 +799,10 @@ public class Actionwords {
         webDriver.findElement(By.cssSelector("mat-form-field:nth-of-type(2) input")).sendKeys(szerkesztendoMegnev, Keys.ENTER);
         Wait();
         List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet mat-cell.mat-cell:nth-child(2)"));
-
-
-        for (int i = 1; i < keresesEredmenye.size(); i++) {
+        Wait();
+        for (int i = 0; i < keresesEredmenye.size(); i++) {
             if (keresesEredmenye.get(i).getText().trim().equals(szerkesztendoMegnev)) {
-                webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+i+") > mat-cell:nth-child(3) > a.btn")).click();
+                webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+(i+1)+") > mat-cell:nth-child(3) > a.btn")).click();
                 break;
             }
         }
@@ -816,12 +835,11 @@ public class Actionwords {
 
         List<WebElement> keresesEredmenye = webDriver.findElements(By.cssSelector("div.m-portlet mat-cell.mat-cell:nth-child(2)"));
         Wait();
-
         for (int i = 0; i < keresesEredmenye.size(); i++) {
             if (!keresesEredmenye.get(i).getText().trim().equals(megnevezes)) {
-                System.out.println(i);
+                webDriver.close();
                 Assert.fail("Nem található fejezet");
-            }
+            }else webDriver.close();
         }
     }
 
@@ -831,12 +849,10 @@ public class Actionwords {
         List<WebElement> fejezetkLista = webDriver.findElements(By.cssSelector("mat-row mat-cell:nth-of-type(1)"));
         if (fejezetkLista.size() > 5) {
             webDriver.close();
-            Assert.fail();
+            Assert.fail("Több elem jelenik meg a kelleténél.");
         } else {
             List<WebElement> olda11 = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
 
-            webDriver.findElement(By.cssSelector("button.mat-paginator-navigation-next")).click();
-            webDriver.findElement(By.cssSelector("button.mat-paginator-navigation-next")).click();
             webDriver.findElement(By.cssSelector("button.mat-paginator-navigation-next")).click();
 
             Wait();
@@ -845,17 +861,26 @@ public class Actionwords {
 
             if (olda11.equals(oldal2)) {
                 webDriver.close();
-                Assert.fail("A két oldal elemei ugyan azok");
+                Assert.fail("A két oldal elemei megyeznek, vagy túl kevés az elemszám a lapozáshoz.");
             }
 
         }
     }
 
     public void vizsgalandoDijtetelsorKivalasztasa() {
+
     }
 
     public void ujDijtetelLetrehozasanakEllenorzese(String megnevezes) {
 
+        Wait();
+        List<WebElement> dijtetelKeres = webDriver.findElements(By.cssSelector(" mat-row mat-cell:nth-of-type(3)"));
+        for (int i = 0; i < dijtetelKeres.size(); i++) {
+            if (dijtetelKeres.get(i).getText().trim().equals(megnevezes)) {
+                System.out.println("Díjtétel megtalálva");
+                break;
+            }else Assert.fail("Nem található a létrehozott díjtétel");
+        }
         webDriver.close();
     }
 
@@ -871,7 +896,13 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(rovidnev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(String.valueOf(humanSzorzo));
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(String.valueOf(gepSzorzo));
-        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled())
+        {
+            this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+        }
+        else{
+            Assert.fail("Hibás adat kitöltés miatt nem menthető a szerkesztés ezért a teszt megszakad");
+        }
     }
 
     //todo hiptest
@@ -959,8 +990,7 @@ public class Actionwords {
         List<WebElement> dijtetelek = webDriver.findElements(By.cssSelector(" mat-row mat-cell:nth-of-type(3)"));
 
         for (int i = 0; i < dijtetelek.size(); i++) {
-            System.out.println(i + 1);
-            if (dijtetelek.get(i).getText().trim().equals("")) {
+            if (dijtetelek.get(i).getText().trim().equals(szerkesztettDijtetel)) {
                 webDriver.findElement(By.cssSelector("mat-row:nth-of-type(" + (i + 1) + ") .mat-cell a.btn")).click();
                 break;
             }

@@ -33,7 +33,7 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
     }
 
 
-    public void gepCserejeADijtetelrol(String kivalasztottGep, int kapcsDijtetel) {
+    public void gepCserejeADijtetelrol(String kivalasztottGep, String kapcsDijtetel) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
@@ -43,11 +43,11 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
 
     @Test
     public void gepCserejeADijtetelrolSzerk1Uida9469f4e28f949ee99c42a8a64d2774d() {
-        gepCserejeADijtetelrol("Gép 2", 1000000);
+        gepCserejeADijtetelrol("Gép 2", "10.0.0.000");
     }
 
 
-    public void gepEltavolitasaDijtetelrolUtolsoEroforras(String gep, int tetelszam) {
+    public void gepEltavolitasaDijtetelrolUtolsoEroforras(String gep, String tetelszam) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
@@ -57,6 +57,6 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
 
     @Test
     public void gepEltavolitasaDijtetelrolUtolsoEroforrasTeszt1Uidd94dea29445c43ddb0c13f5637d80469() {
-        gepEltavolitasaDijtetelrolUtolsoEroforras("Gép 2", 1000000);
+        gepEltavolitasaDijtetelrolUtolsoEroforras("Gép 2", "10.0.0.000");
     }
 }
