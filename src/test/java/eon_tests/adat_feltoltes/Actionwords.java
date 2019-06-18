@@ -60,6 +60,7 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         Wait();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".cdk-overlay-backdrop")));
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
