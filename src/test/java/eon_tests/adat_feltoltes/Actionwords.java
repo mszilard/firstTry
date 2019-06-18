@@ -53,8 +53,8 @@ public class Actionwords {
     public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) {
         this.webDriver.get(url_belso);
         this.webDriver.manage().window().maximize();
-        this.webDriver.manage().timeouts().implicitlyWait(7L, TimeUnit.SECONDS);
-        this.wait = new WebDriverWait(this.webDriver, 50);
+        this.webDriver.manage().timeouts().implicitlyWait(10L, TimeUnit.SECONDS);
+        this.wait = new WebDriverWait(this.webDriver, 60);
         Wait();
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
