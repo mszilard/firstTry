@@ -49,7 +49,7 @@ public class Actionwords {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
     }
     public  void Wait2() {
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("cdk-overlay-backdrop")));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".cdk-overlay-backdrop")));
 
     }
 
@@ -58,6 +58,8 @@ public class Actionwords {
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(this.webDriver, 45);
+        Wait();
+        Wait2();
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         Wait();
