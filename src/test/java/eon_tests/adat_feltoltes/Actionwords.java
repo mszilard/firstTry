@@ -1,15 +1,15 @@
 package eon_tests.adat_feltoltes;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.flywaydb.core.internal.util.FileCopyUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.io.File;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +19,7 @@ public class Actionwords {
 
     private WebDriver webDriver;
     protected WebDriverWait wait;
-    String url_belso = "http://10.10.1.25:91";
+    String url_belso = "http://calcon/"; //régi
     //private String url_belso = "https://calcon.upsolution.hu";
 
     static {
@@ -27,7 +27,7 @@ public class Actionwords {
     }
 
     public Actionwords() {
-//        //Linux
+        //Linux
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
@@ -46,7 +46,7 @@ public class Actionwords {
     }
 
     public void Wait() {
-        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("cdk-overlay-backdrop-showing")));
+        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
     }
 
 
