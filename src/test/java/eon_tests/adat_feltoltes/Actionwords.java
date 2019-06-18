@@ -63,7 +63,8 @@ public class Actionwords {
        // Thread.sleep(100);
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("m-user-profile a")));
         Wait();
-        this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
+      //  this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
+        this.webDriver.findElement(By.cssSelector("m-user-profile a")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
         Wait();
