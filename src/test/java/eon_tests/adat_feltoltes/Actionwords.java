@@ -51,7 +51,7 @@ public class Actionwords {
     }
 
 
-    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) throws InterruptedException {
+    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev){
         this.webDriver.get(url_belso);
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
