@@ -27,7 +27,7 @@ public class Actionwords {
     }
 
     public Actionwords() {
-        //Linux
+//        //Linux
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
@@ -39,7 +39,7 @@ public class Actionwords {
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
 
-//        //Normal
+        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
 
@@ -47,6 +47,7 @@ public class Actionwords {
 
     public void Wait() {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
+       // wait.until(ExpectedConditions())
     }
 
 
@@ -66,6 +67,7 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("mat-dialog-container input[name=nev]")).sendKeys(dijtetelsorNev);
         this.webDriver.findElement(By.cssSelector("mat-dialog-container button.btn-primary")).click();
         Wait();
+
     }
 
     public void dijtetelsorAktivalas(String dijtetelsorNev) {
