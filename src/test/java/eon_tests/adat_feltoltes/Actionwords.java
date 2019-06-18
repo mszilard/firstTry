@@ -60,7 +60,7 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         Wait();
-        Thread.sleep(2000);
+        Thread.sleep(100);
         //wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*=dijtetelsorok")));
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
