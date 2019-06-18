@@ -51,7 +51,7 @@ public class Actionwords {
     }
 
 
-    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev){
+    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) {
         this.webDriver.get(url_belso);
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -63,8 +63,7 @@ public class Actionwords {
        // Thread.sleep(100);
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("m-user-profile a")));
         Wait();
-      //  this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
-        this.webDriver.findElement(By.cssSelector("m-user-profile a")).click();
+        this.webDriver.findElement(By.cssSelector("m-aside-left a[href*=dijtetelsorok")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
         Wait();
