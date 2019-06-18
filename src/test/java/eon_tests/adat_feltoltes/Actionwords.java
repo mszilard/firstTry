@@ -54,9 +54,12 @@ public class Actionwords {
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(this.webDriver, 45);
+        this.Wait();
+        Wait();
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         this.Wait();
+        Wait();
         Wait();
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
