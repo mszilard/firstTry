@@ -51,7 +51,7 @@ public class Actionwords {
     }
 
 
-    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) {
+    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) throws InterruptedException {
         this.webDriver.get(url_belso);
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -60,7 +60,8 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         Wait();
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*=dijtetelsorok")));
+        Thread.sleep(2000);
+        //wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*=dijtetelsorok")));
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
