@@ -33,21 +33,20 @@ public class Actionwords {
         webDriver = new FirefoxDriver(options);
 
 
-        //Headless
+//        //Headless
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
 
-        //Normal
+//        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
 
     }
 
     public void Wait() {
-        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
-       // wait.until(ExpectedConditions())
+        this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("cdk-overlay-backdrop-showing")));
     }
 
 
@@ -57,19 +56,9 @@ public class Actionwords {
         this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(this.webDriver, 60);
         Wait();
-        Wait();
-        Wait();
-        Wait();
-        Wait();
-        Wait();Wait();Wait();Wait();Wait();Wait();
-
         this.webDriver.findElement(By.cssSelector("input[name=username]")).sendKeys(felhNev);
         this.webDriver.findElement(By.cssSelector("input[name=password]")).sendKeys(jelszo, Keys.ENTER);
         Wait();
-       // Thread.sleep(100);
-        Wait();
-        Wait();
-        Wait();Wait();Wait();Wait();Wait();Wait();
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("m-user-profile a")));
         Wait();
         this.webDriver.findElement(By.cssSelector("m-aside-left a[href*=dijtetelsorok")).click();

@@ -32,9 +32,9 @@ public class Actionwords {
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
-//
-//
-//        //Headless
+
+
+        //Headless
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
