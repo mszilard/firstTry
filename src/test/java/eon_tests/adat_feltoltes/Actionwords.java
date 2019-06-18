@@ -152,5 +152,8 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(String.valueOf(fHumanszorzo));
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(String.valueOf(fGepszorzo));
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+
+        webDriver.close();
+
     }
 }
