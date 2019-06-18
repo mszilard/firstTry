@@ -49,7 +49,7 @@ public class Actionwords {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
     }
     public  void Wait2() {
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(".cdk-overlay-backdrop")));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("cdk-overlay-backdrop")));
 
     }
 
