@@ -19,7 +19,7 @@ public class Actionwords {
 
     private WebDriver webDriver;
     protected WebDriverWait wait;
-    String url_belso = "http://10.10.1.25:91";
+    String url_belso = "http://calcon/";
 
     //private String url_belso = "https://calcon.upsolution.hu";
 
@@ -32,11 +32,12 @@ public class Actionwords {
     }
 
     public Actionwords() {
-        //Linux
+
+//        //Linux
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
-//
+////
 //
 //        //Headless
 //        FirefoxOptions options = new FirefoxOptions();
@@ -44,11 +45,9 @@ public class Actionwords {
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
 
-//        //Normal
+        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
-
-
     }
 
     public void dijtetelsor() {
@@ -406,8 +405,8 @@ public class Actionwords {
                 break;
             }
         }
-        Wait();
 
+        Wait();
         webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).clear();
         webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(megnevezes);
         webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).clear();
@@ -427,8 +426,8 @@ public class Actionwords {
         }
         Wait();
 
-        webDriver.findElement(By.cssSelector("div.m-portlet:nth-of-type(2) input")).clear();
-        webDriver.findElement(By.cssSelector("div.m-portlet:nth-of-type(2) input")).sendKeys(megnevezes, Keys.ENTER);
+        webDriver.findElement(By.cssSelector("mat-form-field input")).clear();
+        webDriver.findElement(By.cssSelector("mat-form-field input")).sendKeys(megnevezes, Keys.ENTER);
         Wait();
 
         if (!webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-child(2) > mat-cell:nth-child(1)")).getText().contentEquals(megnevezes)) {
@@ -883,7 +882,6 @@ public class Actionwords {
         }
         webDriver.close();
     }
-
 
     public void fejezetSzerkesztese(int sorszam, String megnevezes, String rovidnev, int humanSzorzo, int gepSzorzo) {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=sorszam]")).clear();

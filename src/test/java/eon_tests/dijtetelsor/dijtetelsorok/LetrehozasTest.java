@@ -1,6 +1,7 @@
 package eon_tests.dijtetelsor.dijtetelsorok;
 
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class LetrehozasTest {
 
@@ -19,7 +20,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void ujDijtetelsorLetrehozasaDijtetelsor1Uidb5ff25f90017447eb7908fcc64d37ff4() {
+    public void ujDijtetelsorLetrehozasaDijtetelsor1Uida787df6935f04001a76fdbde990ce4ec() {
         ujDijtetelsorLetrehozasa("Ditetelsor-Teszt");
     }
 
@@ -33,7 +34,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void dijtetelsorAzonnaliAktivalasAktivalandoUid6e1e277aaf4c4562941abc4cd7b29634() {
+    public void dijtetelsorAzonnaliAktivalasAktivalandoUid5ce2c1ada0484793a3ccc759eed83df7() {
         dijtetelsorAzonnaliAktivalas("Ditetelsor-Teszt");
     }
 
@@ -47,7 +48,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void dijtetelsorMultbeliAktivalasiIdovelAktivalandoUidcb039365b5b94bad97365b1de6ec45ce() {
+    public void dijtetelsorMultbeliAktivalasiIdovelAktivalandoUid44f3ec9b9419406983e7584bbe6f5b49() {
         dijtetelsorMultbeliAktivalasiIdovel("Ditetelsor-Teszt", 4, 30);
     }
 }

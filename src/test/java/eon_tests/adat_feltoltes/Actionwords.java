@@ -61,6 +61,13 @@ public class Actionwords {
         Wait();
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("m-user-profile a")));
         Wait();
+
+//        TakesScreenshot ts =(TakesScreenshot) webDriver;
+//        File source = ts.getScreenshotAs(OutputType.FILE);
+//        String dest = "/Users/MMSOne/Desktop/Headless.png";
+//        File destination = new File(dest);
+//        Files.copy(source.toPath(),destination.toPath());
+
         this.webDriver.findElement(By.cssSelector("m-aside-left a[href*=dijtetelsorok")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();

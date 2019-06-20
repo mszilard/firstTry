@@ -1,6 +1,7 @@
 package eon_tests.adat_feltoltes;
 
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class DijtetelsorTest {
 
@@ -20,6 +21,6 @@ public class DijtetelsorTest {
 
     @Test
     public void alapAdatFeltoltesFeltoltes1Uid8e79a5e3d68a47f0bca9859991a1c6ec() {
-        alapAdatFeltoltes("aram_teszt", "aram", "Díjtételsor 1", "Gép 1", 1000, "Gép 2", 2500, "Humán 1", 2000, "Humán 2", 4500, 1, "Teszt fejezet", "TF", 1, 1);
+        alapAdatFeltoltes("aram_teszt", "aram", "Díjtételsor 1", "Alap Gép 1", 1000, "Alap Gép 2", 2500, "Alap  Humán 1", 2000, "Alap Humán 2", 4500, 1, "Alap  Teszt fejezet", "ATF", 1, 1);
     }
 }

@@ -1,6 +1,7 @@
 package eon_tests.dijtetelsor.dijtetelsorok;
 
 import org.testng.annotations.*;
+import eon_tests.Actionwords;
 
 public class SzerkesztesTest {
 
@@ -20,7 +21,7 @@ public class SzerkesztesTest {
     }
 
     @Test
-    public void dijtetelsorSzerkeszteseSzerkesztesUid905a156dda9c41e1b522f11db57bebd9() {
+    public void dijtetelsorSzerkeszteseSzerkesztesUidf74b869dd59241a590b4e00996e653cc() {
         dijtetelsorSzerkesztese("Ditetelsor-Teszt", "Ditetelsor-Teszt 1");
     }
 }
