@@ -1,7 +1,6 @@
 package eon_tests.adat_feltoltes;
 
 import org.testng.annotations.*;
-import eon_tests.Actionwords;
 
 public class DijtetelsorTest {
 

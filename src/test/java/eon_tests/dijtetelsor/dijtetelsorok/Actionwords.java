@@ -19,7 +19,7 @@ public class Actionwords {
 
     private WebDriver webDriver;
     protected WebDriverWait wait;
-    String url_belso = "http://10.10.1.25:91";
+    String url_belso = "http://calcon/";
 //    private String url_belso = "https://calcon.upsolution.hu";
 
 

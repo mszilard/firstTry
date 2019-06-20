@@ -1,7 +1,6 @@
 package eon_tests.dijtetelsor.dijtetelsorok;
 
 import org.testng.annotations.*;
-import eon_tests.Actionwords;
 
 public class SzerkesztesTest {
 
