@@ -137,8 +137,11 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("ngx-material-timepicker-face div div div:nth-child("+ ora +") span")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div:nth-child(2) ngx-material-timepicker-button button")).click();
-        Assert.assertTrue(!this.webDriver.findElement(By.cssSelector("div.m-portlet button:nth-child(2)")).isEnabled());
-        webDriver.close();
+        if (!this.webDriver.findElement(By.cssSelector("div.m-portlet button:nth-child(2)")).isEnabled()){
+            webDriver.close();
+            Assert.fail("Visszamenőleg nem aktiválható a djtételsor!");
+        }
+        Wait();
 
     }
 
@@ -152,6 +155,7 @@ public class Actionwords {
     }
 
     public void dijtetelsorSzerkesztesenekEllenorzese(String ujNev) {
+        Wait();
 
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();

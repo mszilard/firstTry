@@ -10,6 +10,8 @@ public class LetrehozasTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
+
+
     public void ujDijtetelsorLetrehozasa(String nev) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
@@ -22,6 +24,8 @@ public class LetrehozasTest {
     public void ujDijtetelsorLetrehozasaDijtetelsor1Uida787df6935f04001a76fdbde990ce4ec() {
         ujDijtetelsorLetrehozasa("Ditetelsor-Teszt");
     }
+
+
 
     public void dijtetelsorMultbeliAktivalasiIdovel(String nev, int ora, int perc) {
         actionwords.bejelentkezes("aram_teszt", "aram");
