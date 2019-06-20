@@ -107,6 +107,7 @@ public class Actionwords {
     }
 
     public void dijtetesorAzonnaliAktivalasaEsAnnakEllenorzese(String nev) {
+        Wait();
         this.webDriver.findElement(By.cssSelector("div button.m-btn.ng-star-inserted")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
@@ -128,6 +129,7 @@ public class Actionwords {
     }
 
     public void dijtetelsorMultbeliIdoMegadasa(int ora, int perc) {
+        Wait();
         this.webDriver.findElement(By.cssSelector(".ngx-material-timepicker-toggle")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("ngx-material-timepicker-face div div div:nth-child("+ ora +") span")).click();
