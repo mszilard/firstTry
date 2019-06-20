@@ -75,7 +75,11 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(megnevezes);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=oradij]")).sendKeys(String.valueOf(oradij));
-        Assert.assertTrue(webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled());
+        if (!webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled())
+        {
+            webDriver.close();
+            Assert.fail("Nem megfelelő kitöltés végett a mentés nem lehetséges, ezért a teszt megszakad.");
+        }
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
 
     }
@@ -401,7 +405,7 @@ public class Actionwords {
 
         for (int i = 0; i < keresesEredmenye.size(); i++) {
             if (keresesEredmenye.get(i).getText().trim().equals(szekesztendo)) {
-                webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+i+1+") > mat-cell:nth-child(4) > a")).click();
+                webDriver.findElement(By.cssSelector("mat-row.mat-row:nth-of-type("+(i+1)+") > mat-cell:nth-child(4) > a")).click();
                 break;
             }
         }
