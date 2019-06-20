@@ -40,7 +40,7 @@ public class Actionwords {
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
 
-        //Normal
+//        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
 
@@ -49,6 +49,8 @@ public class Actionwords {
     public void Wait() {
         this.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("m-splash screen")));
     }
+
+    boolean elemMegtalalva = false;
 
     public void dijtetelsor() {
         this.Wait();
@@ -142,6 +144,7 @@ public class Actionwords {
 
 
     public void dijtetelsorSzerkesztese(String ujNev) {
+        Wait();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).clear();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=nev]")).sendKeys(ujNev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
@@ -149,21 +152,22 @@ public class Actionwords {
     }
 
     public void dijtetelsorSzerkesztesenekEllenorzese(String ujNev) {
-        if (webDriver.getCurrentUrl().contentEquals(url_belso + "/dijtetelsorok")) {
 
+        this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
+        Wait();
 
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
 
             for (int i = 0; i < dijtetelsorok.size(); i++) {
                 if (dijtetelsorok.get(i).getText().trim().equals(ujNev)) {
                     System.out.println(i);
+                    elemMegtalalva=true;
                     break;
+                }else if(elemMegtalalva=false){
+                    Assert.fail("A szerkesztett elem nem található!");
                 }
             }
-        } else {
-            webDriver.close();
-            Assert.fail();
-        }
+
     }
 
 }
