@@ -159,7 +159,6 @@ public class Actionwords {
 
     public void dijtetelsorSzerkesztesenekEllenorzese(String ujNev) {
         Wait();
-
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
 
