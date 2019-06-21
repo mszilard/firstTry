@@ -121,6 +121,7 @@ public class Actionwords {
             for (int i = 0; i < dijtetelsorok.size(); i++) {
                 if (dijtetelsorok.get(i).getText().trim().equals(nev) && dijtetelsorallapotok.get(i).getText().trim().equals("Aktív")) {
                     System.out.println(i);
+                    webDriver.close();
                     break;
                 }
             }
@@ -136,13 +137,12 @@ public class Actionwords {
         Wait();
         this.webDriver.findElement(By.cssSelector("ngx-material-timepicker-face div div div:nth-child("+ ora +") span")).click();
         Wait();
-        this.webDriver.findElement(By.cssSelector("div:nth-child(2) ngx-material-timepicker-button button")).click();
-        if (!this.webDriver.findElement(By.cssSelector("div.m-portlet button:nth-child(2)")).isEnabled()){
+        this.webDriver.findElement(By.cssSelector("div.timepicker__actions div:nth-child(2) ngx-material-timepicker-button button")).click();
+        if (!this.webDriver.findElement(By.cssSelector("div.m-portlet button:nth-child(3)")).isEnabled()){
             webDriver.close();
             Assert.fail("Visszamenőleg nem aktiválható a djtételsor!");
         }
         Wait();
-
     }
 
 
@@ -166,8 +166,10 @@ public class Actionwords {
                 if (dijtetelsorok.get(i).getText().trim().equals(ujNev)) {
                     System.out.println(i);
                     elemMegtalalva=true;
+                    webDriver.close();
                     break;
                 }else if(elemMegtalalva=false){
+                    webDriver.close();
                     Assert.fail("A szerkesztett elem nem található!");
                 }
             }

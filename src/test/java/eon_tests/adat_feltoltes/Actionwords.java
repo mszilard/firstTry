@@ -27,7 +27,7 @@ public class Actionwords {
     }
 
     public Actionwords() {
-        //Linux
+//        Linux
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
@@ -38,7 +38,7 @@ public class Actionwords {
 //        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver(options);
-
+//
 //        //Normal
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //        webDriver = new FirefoxDriver();
