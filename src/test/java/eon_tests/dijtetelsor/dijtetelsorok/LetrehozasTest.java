@@ -2,8 +2,6 @@ package eon_tests.dijtetelsor.dijtetelsorok;
 
 import org.testng.annotations.*;
 
-import java.io.IOException;
-
 public class LetrehozasTest {
 
     public Actionwords actionwords;
@@ -29,7 +27,7 @@ public class LetrehozasTest {
 
 
 
-    public void dijtetelsorMultbeliAktivalasiIdovel(String nev, int ora, int perc) throws IOException {
+    public void dijtetelsorMultbeliAktivalasiIdovel(String nev, int ora, int perc) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelsorok();
@@ -38,12 +36,12 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void dijtetelsorMultbeliAktivalasiIdovelAktivalandoUid44f3ec9b9419406983e7584bbe6f5b49() throws IOException {
+    public void dijtetelsorMultbeliAktivalasiIdovelAktivalandoUid44f3ec9b9419406983e7584bbe6f5b49() {
         dijtetelsorMultbeliAktivalasiIdovel("Ditetelsor-Teszt", 4, 30);
     }
 
 
-    public void dijtetelsorAzonnaliAktivalas(String nev) throws IOException {
+    public void dijtetelsorAzonnaliAktivalas(String nev) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelsorok();
@@ -52,7 +50,7 @@ public class LetrehozasTest {
     }
 
     @Test
-    public void dijtetelsorAzonnaliAktivalasAktivalandoUid5ce2c1ada0484793a3ccc759eed83df7() throws IOException {
+    public void dijtetelsorAzonnaliAktivalasAktivalandoUid5ce2c1ada0484793a3ccc759eed83df7() {
         dijtetelsorAzonnaliAktivalas("Ditetelsor-Teszt");
     }
 }

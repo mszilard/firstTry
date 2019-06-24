@@ -9,10 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.io.File;
 
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -52,7 +49,7 @@ public class Actionwords {
     }
 
 
-    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) throws IOException {
+    public void dijtetelsorFelvetele(String felhNev, String jelszo, String dijtetelsorNev) {
         this.webDriver.get(url_belso);
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -64,11 +61,11 @@ public class Actionwords {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("m-user-profile a")));
         Wait();
 
-        TakesScreenshot ts =(TakesScreenshot) webDriver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        String dest = "/Users/MMSOne/Desktop/Headless.png";
-        File destination = new File(dest);
-        Files.copy(source.toPath(),destination.toPath());
+//        TakesScreenshot ts =(TakesScreenshot) webDriver;
+//        File source = ts.getScreenshotAs(OutputType.FILE);
+//        String dest = "/Users/MMSOne/Desktop/Headless.png";
+//        File destination = new File(dest);
+//        Files.copy(source.toPath(),destination.toPath());
 
         this.webDriver.findElement(By.cssSelector("m-aside-left a[href*=dijtetelsorok")).click();
         Wait();
