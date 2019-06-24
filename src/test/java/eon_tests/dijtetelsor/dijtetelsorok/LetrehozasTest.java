@@ -22,7 +22,7 @@ public class LetrehozasTest {
         actionwords.dijtetelsorLetrejottenekEllenorzese(nev);
     }
 
-    @Test
+    @Test(priority = 1)
     public void ujDijtetelsorLetrehozasaDijtetelsor1Uida787df6935f04001a76fdbde990ce4ec() {
         ujDijtetelsorLetrehozasa("Ditetelsor-Teszt");
     }
@@ -37,7 +37,7 @@ public class LetrehozasTest {
         actionwords.dijtetelsorMultbeliIdoMegadasa(ora, perc);
     }
 
-    @Test
+    @Test(priority = 2)
     public void dijtetelsorMultbeliAktivalasiIdovelAktivalandoUid44f3ec9b9419406983e7584bbe6f5b49() throws IOException {
         dijtetelsorMultbeliAktivalasiIdovel("Ditetelsor-Teszt", 4, 30);
     }
@@ -51,7 +51,7 @@ public class LetrehozasTest {
         actionwords.dijtetesorAzonnaliAktivalasaEsAnnakEllenorzese(nev);
     }
 
-    @Test
+    @Test(priority = 3)
     public void dijtetelsorAzonnaliAktivalasAktivalandoUid5ce2c1ada0484793a3ccc759eed83df7() throws IOException {
         dijtetelsorAzonnaliAktivalas("Ditetelsor-Teszt");
     }

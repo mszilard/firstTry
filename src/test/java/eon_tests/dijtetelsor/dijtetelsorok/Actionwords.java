@@ -34,7 +34,7 @@ public class Actionwords {
         webDriver = new FirefoxDriver(options);
 
 
-        //Headless
+//        //Headless
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.setHeadless(true);
 //        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
@@ -85,6 +85,7 @@ public class Actionwords {
 
     public void dijtetelsorLetrejottenekEllenorzese(String nev) {
         Wait();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-row")));
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
             for (int i = 0; i < dijtetelsorok.size(); i++) {
                 if (dijtetelsorok.get(i).getText().trim().equals(nev)) {
@@ -96,6 +97,8 @@ public class Actionwords {
     }
 
     public void dijtetelsorReszletek(String nev) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-row")));
+
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(1)"));
 
 
@@ -142,7 +145,6 @@ public class Actionwords {
 
     public void dijtetelsorMultbeliIdoMegadasa(int ora, int perc) throws IOException {
         Wait();
-        Wait();
 
         TakesScreenshot ts =(TakesScreenshot) webDriver;
         File source = ts.getScreenshotAs(OutputType.FILE);
@@ -153,7 +155,7 @@ public class Actionwords {
 
         this.webDriver.findElement(By.cssSelector("button.ngx-material-timepicker-toggle")).click();
         Wait();
-        Wait();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ngx-material-timepicker-face div div div:nth-child("+ ora +") span")));
         this.webDriver.findElement(By.cssSelector("ngx-material-timepicker-face div div div:nth-child("+ ora +") span")).click();
         Wait();
         this.webDriver.findElement(By.cssSelector("div.timepicker__actions div:nth-child(2) ngx-material-timepicker-button button")).click();
@@ -177,6 +179,7 @@ public class Actionwords {
         Wait();
         this.webDriver.findElement(By.cssSelector("a[href*=dijtetelsorok")).click();
         Wait();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-row")));
 
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
 

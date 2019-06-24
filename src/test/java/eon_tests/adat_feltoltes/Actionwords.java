@@ -26,7 +26,7 @@ public class Actionwords {
     }
 
     public Actionwords() {
-//        Linux
+        //Linux
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
