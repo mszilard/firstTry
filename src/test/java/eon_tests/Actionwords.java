@@ -763,7 +763,7 @@ public class Actionwords {
         Wait();
     }
 
-    public void ujFejezetLetrehozasa(int sorszam, String megnevezes, String rovidnev, String humanSzorzo, String gepSzorzo) throws IOException {
+    public void ujFejezetLetrehozasa(int sorszam, String megnevezes, String rovidnev, int humanSzorzo, int gepSzorzo) throws IOException {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")));
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
@@ -771,8 +771,8 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=sorszam]")).sendKeys(String.valueOf(sorszam));
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(megnevezes);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(rovidnev);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(humanSzorzo);
-        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(gepSzorzo);
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(String.valueOf(humanSzorzo));
+        this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(String.valueOf(gepSzorzo));
 
         TakesScreenshot ts =(TakesScreenshot) webDriver;
         File source = ts.getScreenshotAs(OutputType.FILE);
