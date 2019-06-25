@@ -776,9 +776,7 @@ public class Actionwords {
         {
             this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
         }
-        else{
-            Assert.fail("Hibás adat kitöltés ezért a teszt megszakad");
-        }
+
 
     }
 
