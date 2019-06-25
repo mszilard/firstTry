@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -111,15 +110,14 @@ public class Actionwords {
         Wait();
     }
 
-    public void dijtetesorAzonnaliAktivalasaEsAnnakEllenorzese(String nev) throws IOException {
-        Wait();
+    public void dijtetesorAzonnaliAktivalasaEsAnnakEllenorzese(String nev) {
         Wait();
 
-        TakesScreenshot ts =(TakesScreenshot) webDriver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        String dest = "/Users/MMSOne/Desktop/Headless1.png";
-        File destination = new File(dest);
-        Files.copy(source.toPath(),destination.toPath());
+//        TakesScreenshot ts =(TakesScreenshot) webDriver;
+//        File source = ts.getScreenshotAs(OutputType.FILE);
+//        String dest = "/Users/MMSOne/Desktop/Headless1.png";
+//        File destination = new File(dest);
+//        Files.copy(source.toPath(),destination.toPath());
 
 
         this.webDriver.findElement(By.cssSelector("div button.m-btn.ng-star-inserted")).click();
@@ -143,14 +141,14 @@ public class Actionwords {
             }
     }
 
-    public void dijtetelsorMultbeliIdoMegadasa(int ora, int perc) throws IOException {
+    public void dijtetelsorMultbeliIdoMegadasa(int ora, int perc) {
         Wait();
 
-        TakesScreenshot ts =(TakesScreenshot) webDriver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        String dest = "/Users/MMSOne/Desktop/Headless2.png";
-        File destination = new File(dest);
-        Files.copy(source.toPath(),destination.toPath());
+//        TakesScreenshot ts =(TakesScreenshot) webDriver;
+//        File source = ts.getScreenshotAs(OutputType.FILE);
+//        String dest = "/Users/MMSOne/Desktop/Headless2.png";
+//        File destination = new File(dest);
+//        Files.copy(source.toPath(),destination.toPath());
 
 
         this.webDriver.findElement(By.cssSelector("button.ngx-material-timepicker-toggle")).click();
