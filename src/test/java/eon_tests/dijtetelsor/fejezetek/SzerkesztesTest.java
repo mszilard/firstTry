@@ -20,13 +20,13 @@ public class SzerkesztesTest {
         actionwords.fejezetSzerkesztesenekEllenorzese(megnevezes);
     }
 
-    @Test
+    @Test(priority = 1)
     public void fejezetSzerkeszteseHelyesAdatokkalUid471a37668825470982269242fe5f9635() {
         fejezetSzerkesztese(1, "Teszt Fejezet", "TF", 1, 1, "Teszt fejezet");
     }
 
-    @Test
+    @Test(priority = 2)
     public void fejezetSzerkeszteseHelytelenAdatokkalUid4bd273b9865b40cbb437ee9bd4d9b417() {
-        fejezetSzerkesztese(200, "", "TF", 0, 0, "");
+        fejezetSzerkesztese(200, "", "TF", 0, 0, "Teszt Fejezet");
     }
 }
