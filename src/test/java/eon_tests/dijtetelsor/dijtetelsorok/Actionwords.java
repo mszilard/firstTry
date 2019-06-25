@@ -96,7 +96,7 @@ public class Actionwords {
     }
 
     public void dijtetelsorReszletek(String nev) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-row")));
+        Wait();
 
         List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell:nth-child(1)"));
 

@@ -12,4 +12,4 @@ script:
   - mvn package
 
 after_script:
-  - hiptest-publisher -c hiptest-publisher.conf -p "target/surefire-reports/junitreports/TEST-eon_test.*.xml" --test-run-id=265014
+  - hiptest-publisher -c hiptest-publisher.conf -p "target/surefire-reports/junitreports/TEST-eon_test.*.xml" --test-run-id=271452
