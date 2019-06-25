@@ -783,7 +783,7 @@ public class Actionwords {
     }
 
     public void fejezetLetrejottenekEllenorzese(String megnevezes) {
-        Wait();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-form-field:nth-of-type(2) input")));
 
             webDriver.findElement(By.cssSelector("mat-form-field:nth-of-type(2) input")).sendKeys(megnevezes, Keys.ENTER);
             Wait();
