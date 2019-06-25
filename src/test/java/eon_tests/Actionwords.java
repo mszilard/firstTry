@@ -1,16 +1,16 @@
 package eon_tests;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -763,7 +763,7 @@ public class Actionwords {
         Wait();
     }
 
-    public void ujFejezetLetrehozasa(int sorszam, String megnevezes, String rovidnev, String humanSzorzo, String gepSzorzo) {
+    public void ujFejezetLetrehozasa(int sorszam, String megnevezes, String rovidnev, String humanSzorzo, String gepSzorzo) throws IOException {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")));
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
@@ -773,6 +773,13 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(rovidnev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(humanSzorzo);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(gepSzorzo);
+
+        TakesScreenshot ts =(TakesScreenshot) webDriver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest = "/Users/MMSOne/Desktop/Letrehozas.png";
+        File destination = new File(dest);
+        Files.copy(source.toPath(),destination.toPath());
+
         this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
 //        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled())
 //        {
@@ -782,8 +789,15 @@ public class Actionwords {
 
     }
 
-    public void fejezetLetrejottenekEllenorzese(String megnevezes) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-form-field:nth-of-type(2) input")));
+    public void fejezetLetrejottenekEllenorzese(String megnevezes) throws IOException {
+        Wait();
+
+        TakesScreenshot ts =(TakesScreenshot) webDriver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest = "/Users/MMSOne/Desktop/Kereses.png";
+        File destination = new File(dest);
+        Files.copy(source.toPath(),destination.toPath());
+
 
             webDriver.findElement(By.cssSelector("mat-form-field:nth-of-type(2) input")).sendKeys(megnevezes, Keys.ENTER);
             Wait();
