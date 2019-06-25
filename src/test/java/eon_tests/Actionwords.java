@@ -764,6 +764,8 @@ public class Actionwords {
     }
 
     public void ujFejezetLetrehozasa(int sorszam, String megnevezes, String rovidnev, String humanSzorzo, String gepSzorzo) {
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")));
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=sorszam]")).sendKeys(String.valueOf(sorszam));
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(megnevezes);
@@ -792,6 +794,7 @@ public class Actionwords {
                 if (keresesEredmenye.get(i).getText().trim().equals(megnevezes)) {
                     Assert.assertTrue(keresesEredmenye.size()==1);
                     System.out.println(i);
+                    webDriver.close();
                     break;
                 }
             }
