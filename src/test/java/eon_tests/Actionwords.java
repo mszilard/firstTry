@@ -772,10 +772,11 @@ public class Actionwords {
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(rovidnev);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=humanSzorzo]")).sendKeys(humanSzorzo);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=gepSzorzo]")).sendKeys(gepSzorzo);
-        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled())
-        {
-            this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
-        }
+        this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+//        if (webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).isEnabled())
+//        {
+//            this.webDriver.findElement(By.cssSelector("div.m-portlet button.btn-primary")).click();
+//        }
 
 
     }
