@@ -767,6 +767,7 @@ public class Actionwords {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")));
         this.webDriver.findElement(By.cssSelector("div.m-portlet:nth-child(2) button.btn-primary")).click();
+        Wait();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=sorszam]")).sendKeys(String.valueOf(sorszam));
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(megnevezes);
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=rovidnev]")).sendKeys(rovidnev);
