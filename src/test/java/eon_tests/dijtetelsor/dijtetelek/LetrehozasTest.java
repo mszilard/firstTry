@@ -25,6 +25,11 @@ public class LetrehozasTest {
     }
 
     @Test
+    public void ujDijtetelLetrehozasaLetrehozasHelyesAdatokkal2Uid724efd63bc2f4a4fbfbacbaceaaf2c03() {
+        ujDijtetelLetrehozasa(1000010, "TF", "Új díjtétel2", "feles2", "leírás", "megj", "db", "Teszt-Gép 1", 1, 1, "Gép 2", 2, 2, "Humán 01", 2, 2, "Humán 2", 2, 2);
+    }
+
+    @Test
     public void ujDijtetelLetrehozasaLetrehozasHelytelenAdatokkalUid80b3c9f5660a4c21ae3d98a73839d215() {
         ujDijtetelLetrehozasa(1000002, "TF", "", "feles", "leírás", "megj", "tek", "Gép 2", 0, 1, "Gép 3", 0, 0, "Humán 2", 1, 0, "Humán 3", 0, 0);
     }

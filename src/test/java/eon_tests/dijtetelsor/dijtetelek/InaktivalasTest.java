@@ -21,6 +21,6 @@ public class InaktivalasTest {
 
     @Test
     public void dijtetelInaktivalasaDijtetelInaktivalasaUid45c6831bda1d44e48e19475d759cc5ab() {
-        dijtetelInaktivalasa("Új díjtétel1");
+        dijtetelInaktivalasa("Új díjtétel2");
     }
 }

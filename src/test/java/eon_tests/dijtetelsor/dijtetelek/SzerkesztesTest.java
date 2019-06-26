@@ -19,9 +19,9 @@ public class SzerkesztesTest {
         actionwords.dijtetelSzerkesztesEllenorzese(ujMegnevezes);
     }
 
-    @Test
+    @Test(priority = 1)
     public void dijtetelSzerkesztesetorzsNevSzerkesztesUid61d74fe0f36d48d396b031d3d0dc3133() {
-        dijtetelSzerkesztesetorzs("Díjtétel 1", "Szerkesztett Díjtétel");
+        dijtetelSzerkesztesetorzs("Új díjtétel2", "Szerkesztett Díjtétel");
     }
 
 
@@ -30,12 +30,12 @@ public class SzerkesztesTest {
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelek();
         actionwords.dijtetelReszletek(dijtetelNeve);
-        actionwords.dijtetelEroforrasSzerkesztese(dijtetelNeve, vartOsszeg);
+        actionwords.dijtetelEroforrasSzerkesztese(vartOsszeg, dijtetelNeve);
     }
 
-    @Test
+    @Test(priority = 2)
     public void dijtetelSzerkeszteseEroforrasDijtetelMegnevezesUid9b85c07af92a4a619e1bd5d32ed9fc03() {
-        dijtetelSzerkeszteseEroforras("Új díjtétel1", "7 800");
+        dijtetelSzerkeszteseEroforras("Új díjtétel1", "8 700");
     }
 
 
@@ -47,8 +47,8 @@ public class SzerkesztesTest {
         actionwords.dijtetelEroforrasTorlese();
     }
 
-    @Test
+    @Test(priority = 3)
     public void dijtetelSzerkeszteseUtolsoEroforrasDijtetelNeveUidf4984dff6ecb453c8f80ad42cae27261() {
-        dijtetelSzerkeszteseUtolsoEroforras("Új dijtétel1");
+        dijtetelSzerkeszteseUtolsoEroforras("Új díjtétel1");
     }
 }
