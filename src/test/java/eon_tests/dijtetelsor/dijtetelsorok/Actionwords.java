@@ -84,7 +84,6 @@ public class Actionwords {
 
     public void dijtetelsorLetrejottenekEllenorzese(String nev) {
         Wait();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("mat-row")));
             List<WebElement> dijtetelsorok = webDriver.findElements(By.cssSelector("mat-cell.mat-cell:nth-child(1)"));
             for (int i = 0; i < dijtetelsorok.size(); i++) {
                 if (dijtetelsorok.get(i).getText().trim().equals(nev)) {

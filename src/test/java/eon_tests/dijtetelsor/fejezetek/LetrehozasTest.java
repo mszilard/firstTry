@@ -28,6 +28,6 @@ public class LetrehozasTest {
 
     @Test
     public void fejezetLetrehozasaHelytelenAdatokkalUid12041dc1396a457f85b63009246b2b49() throws IOException {
-        fejezetLetrehozasa(101, "", "GT", 33123123, 33123123);
+        fejezetLetrehozasa(101, "", "GT", 331231231, 331231231);
     }
 }
