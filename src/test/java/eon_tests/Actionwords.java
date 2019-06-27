@@ -1072,10 +1072,13 @@ public class Actionwords {
         List<WebElement> dijtetelek = webDriver.findElements(By.cssSelector(" mat-row mat-cell:nth-of-type(3)"));
 
         for (int i = 0; i < dijtetelek.size(); i++) {
-            System.out.println(i + 1);
             if (dijtetelek.get(i).getText().trim().equals(dijtetelNeve)) {
                 //össz költésg
-                Assert.assertEquals(vartOsszeg, webDriver.findElement(By.cssSelector("mat-row:nth-of-type(" + (i + 1) + ") mat-cell:nth-child(7)")).getText());
+                if (!(webDriver.findElement(By.cssSelector("mat-row:nth-of-type(" + (i + 1) + ") mat-cell:nth-child(7)")).getText().equals(vartOsszeg))){
+
+                    Assert.fail("A várt összeg nem egyezik a tényleges összeggel.");
+
+                }
                 System.out.println(webDriver.findElement(By.cssSelector("mat-row:nth-of-type(" + (i + 1) + ") mat-cell:nth-child(7)")).getText());
                 break;
 

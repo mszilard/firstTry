@@ -30,12 +30,12 @@ public class SzerkesztesTest {
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelek();
         actionwords.dijtetelReszletek(dijtetelNeve);
-        actionwords.dijtetelEroforrasSzerkesztese(vartOsszeg, dijtetelNeve);
+        actionwords.dijtetelEroforrasSzerkesztese(dijtetelNeve,vartOsszeg);
     }
 
     @Test(priority = 2)
     public void dijtetelSzerkeszteseEroforrasDijtetelMegnevezesUid9b85c07af92a4a619e1bd5d32ed9fc03() {
-        dijtetelSzerkeszteseEroforras("Új díjtétel1", "8 700");
+        dijtetelSzerkeszteseEroforras("Új díjtétel1", "7 800");
     }
 
 
