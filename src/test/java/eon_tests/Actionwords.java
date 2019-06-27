@@ -993,7 +993,7 @@ public class Actionwords {
         webDriver.close();
     }
 
-    public void dijtetelSzerkesztese(String szerkesztendoDijtetel, String ujMegnevezes) {
+    public void dijtetelSzerkesztese(String szerkesztendoDijtetel, String ujMegnevezes) throws IOException {
         webDriver.findElement(By.cssSelector("mat-form-field:nth-of-type(2) input")).sendKeys(szerkesztendoDijtetel, Keys.ENTER);
         Wait();
 
@@ -1006,7 +1006,13 @@ public class Actionwords {
                 break;
             }
         }
+
         Wait();
+        TakesScreenshot ts =(TakesScreenshot) webDriver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest = "/Users/MMSOne/Desktop/Megnevezes.png";
+        File destination = new File(dest);
+        Files.copy(source.toPath(),destination.toPath());
 
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).clear();
         this.webDriver.findElement(By.cssSelector("div.m-portlet input[name=megnevezes]")).sendKeys(ujMegnevezes);

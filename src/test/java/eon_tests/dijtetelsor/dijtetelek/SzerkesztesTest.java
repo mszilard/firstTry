@@ -3,6 +3,8 @@ package eon_tests.dijtetelsor.dijtetelek;
 import org.testng.annotations.*;
 import eon_tests.Actionwords;
 
+import java.io.IOException;
+
 public class SzerkesztesTest {
 
     public Actionwords actionwords;
@@ -11,7 +13,7 @@ public class SzerkesztesTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void dijtetelSzerkesztesetorzs(String szerkesztendoDijtetel, String ujMegnevezes) {
+    public void dijtetelSzerkesztesetorzs(String szerkesztendoDijtetel, String ujMegnevezes) throws IOException {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelek();
@@ -20,7 +22,7 @@ public class SzerkesztesTest {
     }
 
     @Test(priority = 1)
-    public void dijtetelSzerkesztesetorzsNevSzerkesztesUid61d74fe0f36d48d396b031d3d0dc3133() {
+    public void dijtetelSzerkesztesetorzsNevSzerkesztesUid61d74fe0f36d48d396b031d3d0dc3133() throws IOException {
         dijtetelSzerkesztesetorzs("Új díjtétel2", "Szerkesztett Díjtétel");
     }
 
