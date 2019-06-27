@@ -3,6 +3,8 @@ package eon_tests.dijtetelsor.dijtetelek;
 import org.testng.annotations.*;
 import eon_tests.Actionwords;
 
+import java.io.IOException;
+
 public class InaktivalasTest {
 
     public Actionwords actionwords;
@@ -11,7 +13,7 @@ public class InaktivalasTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-    public void dijtetelInaktivalasa(String dijtetelNeve) {
+    public void dijtetelInaktivalasa(String dijtetelNeve) throws IOException {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorDijtetelek();
@@ -20,7 +22,7 @@ public class InaktivalasTest {
     }
 
     @Test
-    public void dijtetelInaktivalasaDijtetelInaktivalasaUid45c6831bda1d44e48e19475d759cc5ab() {
+    public void dijtetelInaktivalasaDijtetelInaktivalasaUid45c6831bda1d44e48e19475d759cc5ab() throws IOException {
         dijtetelInaktivalasa("Szerkesztett Díjtétel");
     }
 }

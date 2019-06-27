@@ -933,7 +933,7 @@ public class Actionwords {
     }
 
     //todo hiptest
-    public void dijtetelInaktivalasa(String dijtetelNeve) {
+    public void dijtetelInaktivalasa(String dijtetelNeve) throws IOException {
         webDriver.findElement(By.cssSelector("mat-form-field:nth-of-type(2) input")).sendKeys(dijtetelNeve, Keys.ENTER);
         Wait();
 
@@ -941,13 +941,20 @@ public class Actionwords {
 
         System.out.println(inakitavalandoKeres.size());
         for (int i = 0; i < inakitavalandoKeres.size(); i++) {
-            System.out.println(i + 1);
+
             if (inakitavalandoKeres.get(i).getText().trim().equals(dijtetelNeve)) {
                 webDriver.findElement(By.cssSelector("mat-row:nth-of-type(" + (i + 1) + ") .mat-cell a.btn")).click();
                 break;
             }
         }
         Wait();
+
+        TakesScreenshot ts =(TakesScreenshot) webDriver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest = "/Users/MMSOne/Desktop/Inaktivalas.png";
+        File destination = new File(dest);
+        Files.copy(source.toPath(),destination.toPath());
+
         this.webDriver.findElement(By.cssSelector("div.m-subheader a.btn")).click();
         this.webDriver.findElement(By.cssSelector("mat-dialog-container .mat-select")).click();
         Wait();
