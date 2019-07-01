@@ -1143,7 +1143,7 @@ public class Actionwords {
 
             if (olda11.equals(oldal2)) {
                 webDriver.close();
-                Assert.fail("Paginator nem megfelelően működik, a két oldal elemei ugyan azok");
+                Assert.fail("Két különböző oldal elemei megegyeznek vagy kevés az elem a teszt végrehajtásához.");
             }
             webDriver.close();
 
