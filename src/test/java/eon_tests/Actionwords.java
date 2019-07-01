@@ -1000,7 +1000,6 @@ public class Actionwords {
         List<WebElement> dijtetelek = webDriver.findElements(By.cssSelector(" mat-row mat-cell:nth-of-type(3)"));
 
         for (int i = 0; i < dijtetelek.size(); i++) {
-            System.out.println(i + 1);
             if (dijtetelek.get(i).getText().trim().equals(szerkesztendoDijtetel)) {
                 webDriver.findElement(By.cssSelector("mat-row:nth-of-type(" + (i + 1) + ") .mat-cell a.btn")).click();
                 break;

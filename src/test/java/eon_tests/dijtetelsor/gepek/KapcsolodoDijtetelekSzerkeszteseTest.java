@@ -12,13 +12,13 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
         actionwords = new Actionwords();
     }
 
-    @Test
     public void valtasDijtetelekKozottUidc4ef7184cfc14baeb2fa7744fd4ba5ad() {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
         actionwords.dijtetelsorGepek();
         actionwords.dijtetelValasztasaAktivIdozitett();
     }
+
     public void gepEltavolitasaDijtetelrol(String tetelszam, String gep) {
         actionwords.bejelentkezes("aram_teszt", "aram");
         actionwords.dijtetelsor();
@@ -43,7 +43,7 @@ public class KapcsolodoDijtetelekSzerkeszteseTest {
 
     @Test
     public void gepCserejeADijtetelrolSzerk1Uida9469f4e28f949ee99c42a8a64d2774d() {
-        gepCserejeADijtetelrol("Gép 2", "10.0.0.000");
+        gepCserejeADijtetelrol("Gép 2", "10.0.0.010");
     }
 
 
